@@ -1,0 +1,53 @@
+\section{KMS-state}
+
+\subsection{definition of KMS-state}
+\begin{definition}
+  Let $\A$ be a C*-algebra.
+  Let $\alpha$ be a representation of $\R$ as a automorphism on $\A$ s.t. $t \mapsto \alpha_t(A)$ continuous.
+  For $0 \leq \beta < \infty$, we say that an invariant state $\varphi$ of $\A$ is a $\beta$-KMS state if $\varphi(\alpha_t(A)B)=\varphi(B\alpha_{t+i\beta}(A))$ for $A \in \A^a$ and $B \in \A$,
+  where $\A^a$ is a set of all analitic elements i.e. $t \mapsto \alpha_t(a)$ has a analytic extension on $\C$.\\
+  When $\beta = 0$, $\varphi$ is called chaotic state.
+  When $\beta=1$, $\varphi$ is called $\{\alpha_t\}$-KMS state.
+\end{definition}
+
+\begin{remark}
+  It definition is equivalent to KMS condition of modular theory.
+\end{remark}
+
+\begin{proposition}
+  Let $\A = M_n(\C)$, $A > 0$ and $\alpha_t(x) = A^{it}xA^{-it}$.
+  Then, $\varphi$ is a $\{\alpha_t\}$-KMS state  if and only if $\varphi(x)= \frac{\Tr(A^{-1}x)}{\Tr(A^{-1})}$.
+\end{proposition}
+
+\begin{proof}
+  We may asuume $\Tr(A^{-1})=1$. \\
+  "only if" part follows from that $z \mapsto \Tr(A^{-1}xA^zyA^{-z})$ is analytic. \\
+  Let $\psi$ be an another $\{\alpha_t\}$-KMS state.
+  Then, there exists a positive matrix $B$ s.t. $\psi = \Tr(B \cdot )$.
+  By KMS condition, for $x$, $y \in M_n(\C)$, 
+  \begin{align*}
+    \Tr(BxA^{i(t+i)}y^{-i(t+i)}) &= \Tr(BA^{it}yA^{-it}x), \\
+    \Tr(A^{-1}yAB(A^{-it}xA^{it})) &= \Tr(ByA^{it}xA^{it}).
+  \end{align*}
+  Since $\Tr((A^{-1}yAB-By)A^{-it}xA^{it}) = 0$, $A^{-1}yAB=By$.
+  So, $AB \in M_n(\C)'$.
+\end{proof}
+
+\subsection{Cuntz algebra $\O_n$}
+\cite{olesen1978some}
+For $t \in \R$, let $\rho_t$ be an automorphism of $\O_n$ s.t. $\rho_t(S_i) = e^{it}S_i$.
+
+\begin{theorem}
+  The C*-dynamical system $(\O_n, \mathbb{T}, \rho)$ has exactly one KMS state. 
+  Furthermore, the onlyaddmissible $\beta$-value is $\log n$ if $n < \infty$, amd $\infty$ if $n=\infty$.
+\end{theorem}
+
+\begin{proof}
+  We only prove $n < \infty$. otherwise is yokuwakaran. 
+  Let $\varphi_n = \tau_n \circ E_0$, where $\tau_n$ is a unique tracial state on $\F_n$.
+  Since $P_n \subset \O_n^a$ and $P_n$ is dense in $\O_n$, by Phragmen-Lindel$\ddot{o}$f, we suffices to show the case in $P_n$.
+  By unique decomposition, we may assume $A=S^{k*}a$, $B = bS^k$, where $a$, $b \in \F_n$. 
+  $\varphi_n(\rho_t(A)B) = n^ke^{-ikt}\varphi_n(ab)$,
+  $\varphi_n(B\rho_{t+i\beta}(A)) = n^ke^{-i(t+i\beta)k}\varphi_n(ab)$. \\
+  
+\end{proof}

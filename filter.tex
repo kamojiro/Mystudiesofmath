@@ -1,0 +1,27 @@
+
+\section{filter}
+
+\begin{definition}
+  A $\mathcal{F}$ is called by a free ultrafilter if it satisfies the followings.
+  \begin{itemize}
+    \item $\mathcal{F}\neq \emptyset$ and $\mathcal{F} \neq \mathcal{P}(X)$;
+    \item $A \in F, A \subset B \Rightarrow B \in \mathcal{F}$;
+    \item $A, B \in \mathcal{F}, \exists C \in \mathcal{F} s.t. C \subset A \cap C$;
+    \item (ultra) $A \subset \mathcal{P}(X), either A or X \backslash A$;
+    \item (free) $\cap \mathcal{F} = \emptyset $:
+  \end{itemize}
+\end{definition}
+
+\begin{proposition}
+  $\beta\N\backslash\N \ni \omega \leftrightarrow \mathcal{F}:free ultrafilter on \N$.\\
+  $\mathcal{F} := \{S\cap\N | S\subset \beta\N, \omega \in S^{i}\}$.\\
+  $\{\omega\} := \cap\{\overline{S} | S \in \mathcal{F} \}$.tabunatterukedoayashii.
+\end{proposition}
+
+\begin{remark}
+  $\lim_{n \rightarrow \omega} (x_n)_{n \in \N} = \alpha$ $\Leftrightarrow \forall \varepsilon > 0, \exists U \in \mathcal{F}_\omega , \forall V \subset U, |x_n - \alpha| < \varepsilon (n \in V)$.
+\end{remark}
+
+\begin{remark}
+  If $x_n = (-1)^n$,  $\lim_{n \rightarrow \omega} (x_n)_{n \in \N}$ exists $1$ or $-1$, but $\lim_{n \rightarrow \infty} (x_n)_{n \in \N}$ dose not exist.
+\end{remark}

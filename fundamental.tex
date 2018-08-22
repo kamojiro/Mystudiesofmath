@@ -1,0 +1,154 @@
+\section{fundamental theory of C*-algebras(not only ozbr)}
+\subsection{completely positive}
+\begin{definition}
+  $\varphi : A \rightarrow B$ is completely positive(c.p.), if for all $n$, $\varphi \otimes {\rm id}_n : M_n(\C) \rightarrow M_n(\C)$ is positive. \\
+  contractive c.p.(c.c.p.)
+\end{definition}
+
+\begin{theorem}
+  Let $A$ be unital C*-algebras and $\varphi : A \rightarrow B(H)$ be a unital *-hom.
+  Then, there exisit a Hilbert space $\hat{H}$, $\pi : A \rightarrow B(\hat{H})$ and $V : H \rightarrow \hat{H}$ s.t. $\varphi = V^* \pi(a) V$ ($ a \in A$):
+    \[
+  \xymatrix{
+    H \ar[r]^{\varphi(a)} \ar[d]^V & H \ar[d]^V \\
+    \hat{H} \ar[r]^{\pi(a)}& \hat{H}
+  }
+  \]
+\end{theorem}
+
+\begin{proof}
+  We define inner product on $\hat{H}$ by $\< \sum a_i \otimes \xi_i , \sum b_i \otimes \zeta_i\> := \sum_{i,j}\<\varphi(b_j^*a_i)\xi_i,\zeta_j\>$.
+  We denote a completion of $A \odot H / N$ by $\hat{H}$, where $N = \{a \in A\odot H | \varphi(a^*a)=0\}$. \\
+  We define $V$ by a extension of $\xi \rightarrow  1_A \otimes \xi$. 
+  We define $\pi$ by a extension of $a_i \otimes \xi_i \rightarrow aa_i \otimes \xi_i$. \\
+  We remark $V^*(a \otimes xi) = \varphi(a)\xi$.
+\end{proof}
+
+\begin{proposition}
+  Let $\pi$ be a non-zero homomorphism.
+  Then, $\pi$ is a $*$-homomorphism iff $||\pi||=1$.
+\end{proposition}
+
+\begin{proof}
+  At first, we show that $x \in B(H)$ is unitarty iff $||x|| = ||x^{-1}||=1$.
+  Only if:it follows $x$ is isometric.\\
+  We suffices to show for $u \in \mathcal{U}(H)$, $\pi(u)$ is unitary.
+\end{proof}
+
+\begin{theorem}
+  Let $A$ be a unital C*-algebra and $E \subset A$ be an operator subsystem.
+  Then, every c.c.p. map $\varphi : E \rightarrow B(H)$ extends to a c.c.p. map $\overline{\varphi} : A \rightarrow B(H)$.
+\end{theorem}
+
+\begin{proposition}
+  Let $A$ be a unital C*-algebra.
+  A map $\varphi:A \rightarrow M_m(\C)$ is c.p. if and only if $\hat{\varphi}$ is positive on $M_n(\C)$,
+  where $\hat{\varphi}((a_{ij})) = \sum \varphi(a_{ij})$.\\
+  ${\rm CP}(A,M_n(\C)) \varphi \mapsto \hat{\varphi} \in M_n(\C)_{+}^*$ is a bijective correspondence.
+\end{proposition}
+
+\begin{definition}[nuclear]
+  Let $A$, $B$ be a C*-algebras.
+  Let $\theta:A \rightarrow B$ be a map.\\
+  $\varphi$ is called nuclear if there exist c.c.p. maps $\varphi_n : A \rightarrow M_{k(n)}$ and $\psi_n:M_{k(n)} \rightarrow B$ s.t. $\psi_n \circ \varphi_n \rightarrow \theta$ in the point-norm topology.
+\end{definition}
+
+\begin{theorem}
+  Let $A$ be a C*-algebra.
+  $A$ is nuclear if and only if $A$ has a property(T):$||\cdot||_{max} = ||\cdot||_{min}$
+\end{theorem}
+
+\begin{proof}
+  $\varphi$ 
+\end{proof}
+
+\subsection{Kadison-Schwartz inequality}
+\begin{theorem}[Kadison-Scwartz inequality \cite{kadison1952generalized}]
+  Let $A$ be a $\rm{C}^*$-algebra.
+  Let $\varphi$ be a positive linear map from $A$ to $B(H)$ s.t. $\|\varphi\| \leq 1$..
+  Then, for each $a \in A_{h}$,
+  \begin{align*}
+    \varphi(a^2) \geq \varphi(a)^2.
+  \end{align*}
+\end{theorem}
+
+\begin{proof}
+  We may assume $A$ is unital.
+  We may assume $A = C(\Omega)$, where $\Omega$ is a compact Hausdorff space.
+  By the GNS construction,
+  there exists a injective $*$-homomorphism from $A$ to $B(K)$.
+  $C(\Omega)$ is abelian, the above map is u.c.i and $\varphi$ is u.c.p.
+  By the injectivity, there exists a u.c.p map $B(K) \rightarrow B(H)$ extending $\varphi$, we continue to denote by $\varphi$.
+  We suffices to show that for $\alpha_i \in \R$ and characteristic functions $E_i$ of disjoint borel subsets of $X$,
+  \begin{align*}
+    \varphi((\sum \alpha_i E_i)^2) \geq (\varphi(\sum \alpha_i E_i))^2.
+  \end{align*}
+  By disjointness,
+  \begin{align*}
+    \varphi(\sum \alpha_i^2 E_i) \geq (\varphi(\sum \alpha_i E_i))^2.
+  \end{align*}
+  So, we suffices to show $\varphi(E_i) \geq \varphi(E_i)^2$.
+  Since $\|E_i\| = 1$ and $\|\varphi\| \leq 1$,
+  $\varphi(E_i) \leq 1$.
+  Also, $\varphi$ is positive, $\varphi(E_i)$ is self-adjoint.
+  So, $\varphi(E_i) \geq \varphi(E_i)^2$.
+\end{proof}
+
+\subsection{operator system}
+
+\begin{theorem}[\cite{choi1977injectivity}]
+  Let $R$ be an injective envelope system and completely isometoric map $R \rightarrow B(H)$.
+  Then, there exists a unital complete order isomorphism of $R$ onto an essentially unique unital $\rm{C}^*$-algebra.
+  The latter is conditionally complete, 
+  i.e. any increasing net in $R_h$ ehich is bounded above hs a least upper bound in $R_h$.
+  
+  Espesially, the $\rm{C}^*$-algebra may be faithfully represented as a AW$^{*}$-algebra.
+  
+  Furthermorem, if $R$ is a $\sigma$-weakly closed, then the $\rm{C}^*$-algebra may be faithfully represented as a von Neumann algebra.
+\end{theorem}
+
+\subsection{implimitivity theorem}
+\begin{theorem}
+  Let $\Gamma$ be a discrete group and $\Lambda$ be a subgroup of $\Gamma$.
+  Then,
+  \begin{align*}
+    c_0(\Gamma/\Lambda)\rtimes_r\Gamma \cong \mathbb{K}(l^2(\Gamma/\Lambda))\otimes C_r^*(\Gamma)
+  \end{align*}
+\end{theorem}
+https://math.dartmouth.edu/~dana/cpcsa/draft-31Jan06.pdf
+
+\subsection{Gelfand Duality}
+\begin{proposition}[\cite{suzuki2018complete}]
+  Let $X$, $Y$ be locally compaact spaces.
+  Let $\varphi : C_0(X) \rightarrow C_0(Y)$ be a isometric *-homomorphism s.t. $\varphi(C_0(X))C_0(Y) \subset C_0(Y)$ is norm-dense.
+  Then, $\varphi* : Y \rightarrow X$ is a proper quotient map.
+\end{proposition}
+
+\begin{proof}
+  Proper: Let $K$ be a compact subset of $X$.
+  By compactness, finite relative compact open subsets, whose closure relative comapact open subset, covers $K$.
+  So, we may assume there exist $f \in C_c(X)$ s.t. $K = supp(f)$.
+  \begin{align*}
+    supp(\varphi(f)) &= \{y \in Y : 0 \neq y(\varphi(f)) = (y\circ \varphi)(f) = \varphi^*(y)(f)\}\\
+      &= (\varphi^*)^{-1}(supp(f)).
+  \end{align*}
+  Quatient: surjectivity is OK.
+  Since $\varphi(C_0(X))C_0(Y) \subset C_0(Y)$ is norm-dense,
+  We can think one-point compactification and $\varphi(\infty_Y) = \infty_X$.
+  Then, 
+  \[
+  \xymatrix{
+    C_0(X) \ar[r]^{\varphi} \ar[d] & C_0(Y) \ar[d] \\
+    C(\tilde{X}) \ar[r]^{\tilde{\varphi}} & C(\tilde{Y})
+  }
+  \]
+  and $\tilde{\varphi}^*|_Y = \varphi^*$.
+  Since $\tilde{\varphi}^*$ is a cntinuous surjective map from a compact space to compact space,
+  it is an open map.
+  So, a quotient topology on $Y$ w.r.t. $\varphi^*$ correspondens to an original topology on $Y$.  
+\end{proof}
+
+\begin{remark}
+  Let $X$ be a locally compact space.
+  Then, $y_i \rightarrow \infty$ $\Leftrightarrow$ for any $f \in C_0(Y)$, $f(y_i) /rightarrow 0$.
+\end{remark}

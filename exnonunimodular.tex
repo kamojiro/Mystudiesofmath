@@ -1,0 +1,37 @@
+\subsection{$(C_c(G),\mu) \curvearrowright L^2(G,\mu)$\label{nonunimodular}}
+This is a left Hilbert algebra. 
+\begin{example}
+$G=\R_+^*\rtimes\R$ is not unimodular.\\
+
+$\frac{1}{x^2}dxdy$ is a left invariant Haar measure.\\
+$\bigtriangleup : G \rightarrow \R^*  \begin{pmatrix} x&y\\0&1 \end{pmatrix} \mapsto |x|$ is a modular function.\\
+\end{example}
+Let $\bigtriangleup$ be a modular function. \\
+The following lemma followed by Lebaesgue dominated theorem.
+\begin{lemma}
+  Suppose $f \in C(G)$ and $h, f \in L^2(G,\mu)$. The following are equivalent.
+  \begin{itemize}
+    \item $h = gf$;
+    \item there exists $f_n \in C_c(G)$ s.t. $f_n \rightarrow f$ and $gf_n \rightarrow gf$.
+  \end{itemize}
+\end{lemma}
+
+\begin{theorem}
+  \begin{itemize}
+    \item $\mathcal{D}_S := \{\xi \in L^2(G,\mu) | \bigtriangleup^{\frac{1}{2}}\xi(s) \in L^2(G,\mu)\}$ and $S\xi(s) := \overline{\xi(s^{-1})}\bigtriangleup(s)^{-1}$\};
+    \item $\mathcal{D}_{S^*} := \{\xi \in L^2(G,\mu) | \bigtriangleup^{\frac{1}{2}}\xi(s) \in L^2(G,\mu)\}$ and $S^*\xi(s) := \overline{\xi(s^{-1})}$\};
+    \item Its modular operator is a modular map;
+      \item $J : \bigtriangleup^{\frac{1}{2}}(s)\xi(s) \mapsto \overline{\xi(s^{-1})}\bigtriangleup(s)^{-1}$:
+  \end{itemize}
+\end{theorem}
+
+\begin{lemma}
+  If $f \in L^1(G)$, then $f*$ is a bounded linear operator on $B(L^2(G))$.
+\end{lemma}
+
+Since a modular map does not have zero and continuous, so for any compact set $K$ of $G$, there exists $\varepsilon > 0$ s.t. $|f(x)| \geq 0$ $ (x \in K)$. Therefore, 
+\begin{theorem}
+  $C_c(G) \subset \T$.
+\end{theorem}
+
+$e^{-\bigtriangleup^2}\xi \in \T $?

@@ -1,0 +1,18 @@
+\subsection{Araki-Woods factor}
+$\mathcal{A}_n := \otimes_{j=1}^{n} M_{k_j} (= M_{k_1 \cdots K_n})$.\\
+$\mathcal{A} := \overline{\cup_n \A_n}$.\\
+Let $\phi_n$ be a state on $M$. There exists $T_n \in M_{k_n}(\C)$ s.t. $\phi_n = tr(T_n \cdot)$.
+We can define state $\phi^{(n)}$ on $M$ by $\phi^{(n)} := tr((\otimes_{j=1}^nT_j \cdot))$.
+By $tr(T_n) = 1$, $\phi^{(n+1)}|_{\mathcal{A}_n} = \phi^{(n)}$.
+\begin{theorem}
+  $\phi = \lim \phi^{(n)}$ is a factorial state.
+\end{theorem}
+
+\begin{proof}
+  Suppose $Q \in Z(\pi_\phi(\A)'')$.
+  By Kaplansky density theorem, there exist $\{\mathcal{A}_n\} \subset \mathcal{A}_\infty = \cup_n \mathcal{A}_n$s.t. $||\pi_\phi(A_k)|| \leq ||Q|| $and $ \pi_\phi(A_k) \rightarrow^s Q$.
+  $B_k = \int_{\mathcal{U}(\mathcal{A}_n)} UA_kU^{*} dU$.
+  Then, $\pi_\phi (B_k) \rightarrow^s Q$.
+  For each $C_1, C_2 \in \mathcal{A}_n$, $\<\pi_\phi(C_1)x_\phi, Q\pi_\phi(C_2)x_\phi\>=\lim \phi(C_1^*C_2B_k) = \<x_\phi,Qx_\phi\>\<\pi_\phi(C_1)x_\phi, \pi_\phi(C_2)x_\phi\>$,
+  because $B_k \in {\mathcal{A}_n}'\cap \mathcal{A}_m = \C I \otimes (\otimes_{j=n+1}^m M_{k_j}(\C))$.
+\end{proof}

@@ -1,0 +1,52 @@
+\subsection{$M_n(\C)$}
+
+\begin{proposition}
+  $M_n(\C) = L (\Z/n\Z \rtimes \Z/n\Z)$.
+\end{proposition}
+
+\begin{proof}
+  It follows from Takesaki, since $\L^\infty(\Z/n\Z)$ is atomic and the action is free and ergodic.
+\end{proof}
+
+
+\begin{theorem}
+  Let $\varphi$ be a normalized trace and $\psi$ be a functional on $M_n(\C)$.\\
+  Then, there exists positive matrix $A$ s.t. $\psi = \varphi(A\cdot) = \<\cdot A^{\frac{1}{2}},A^{\frac{1}{2}}\>_{HS}$.
+\end{theorem}
+
+\begin{proof}
+  $\varphi(e_{ij})=a_{ij}$.
+\end{proof}
+
+\begin{theorem}
+  $\bigtriangleup_\varphi=L_AR_{A^{-1}}$. $\bigtriangleup_\varphi^{it}=L_{A^{it}}R_{A^{-it}}$. \\
+  $Jx=\bigtriangleup_\varphi^{\frac{1}{2}}x^*\bigtriangleup_\varphi^{-\frac{1}{2}}$.
+\end{theorem}
+
+\begin{proposition}
+  Let $\A = M_n(\C)$. $\alpha_t(x) = A^{it}xA^{-it}$.
+  Then, $\varphi$ is a $\{\alpha_t\}$-KMS state  if and only if $\varphi(x)= \frac{\Tr(A^{-1}x)}{\Tr(A^{-1})}$.
+\end{proposition}
+
+\begin{proof}
+  at KMS state.
+\end{proof}
+
+\begin{theorem}
+  Let $y \in M_n(\C)$ be a $Jy=y$.
+  There exists $c \in M_n(\C)_{sa}$ s.t. $y = A^{\frac{1}{4}}cA^{-\frac{1}{4}}$.\\
+  Furthermore, $\mathfrak{P} = A^{\frac{1}{4}}\mathfrak{P}_SA^{-\frac{1}{4}} = \{A^{\frac{1}{4}}xA^{-\frac{1}{4}} | x \; is \; a \; self$-$adjoint \; positive\}$.
+\end{theorem}
+
+\begin{theorem}
+  If $A$'s eigenvalues are different, $M_n(\C)_0^{\varphi}=diagonal \, operators$.
+\end{theorem}
+
+\begin{theorem}
+  Let $A = M_{2^n}(\C)$, $A = \begin{pmatrix} 1 & 0 \\ 0 & \lambda \end{pmatrix}$ and $\varphi_n : = \otimes \frac{1}{1+\lambda}{\rm Tr}\left(\begin{pmatrix} 1 & 0 \\ 0 & \lambda \end{pmatrix} \cdot \right) \, (0 < \lambda < 1)$. Then, $M_0^{\varphi_n} = \oplus_{k=0}^n M_{_nC_k}(\C)$.
+\end{theorem}
+
+\begin{proposition}
+  Let $k_1 +k_2 + \cdots +k_m=n$, $p_{j}M_n(\C)p_{j}=M_{k_j}$.
+  $E:M_n(\C) \rightarrow M_{k_1}\oplus \cdots \oplus M_{k_m}$ $E(a):= \sum p_{k_j}ap_{k_j}$ is a conditional expectation.
+\end{proposition}

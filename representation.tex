@@ -1,0 +1,55 @@
+\section{Representations}
+
+\subsection{Induced Representations}
+We assume $G$ is discrete group.
+Let $H < G$ be a subgroup of $G$.
+In the case of locally compact groups, if $H$ is open or compact open, probably OK.
+Let $\sigma$ be a unitary representation of $H$.
+Let $q:G \rightarrow G/H$ be a quotient map.
+\begin{align*}
+  \mathcal{F}_0 := \{f \in C_c(G,H_\sigma) | q(supp(f)):compact,\, f(y \xi) = \sigma(\xi^{-1})f(y) \; (y \in G,\; \xi \in H)\}.
+\end{align*}
+For $f$, $g \in \mathcal{F}_0$,
+\begin{align*}
+  \<f,g\> := \int_{G/H}\<f(x),g(x)\>_\sigma d \mu(xH).
+\end{align*}
+
+We define $\mathcal{F}$ by the completion of $\mathcal{F}_0$ w.r.t. this inner product.
+$G$ acts on $\mathcal{F}$ by left transformation, denoted by $\ind_H^G(\sigma)$
+\begin{remark}
+  If $\sigma$ is a trivial representation, $\ind_H^G(\sigma)$ is the natural representation of $G$ on $l^2(G/H)$ by left transformation.
+\end{remark}
+\begin{proposition}
+  $\ind_H^G(\lambda_H) \cong \lambda_G$.
+\end{proposition}
+
+\begin{proof}
+  \begin{align*}
+    \mathcal{F} := \{f \in l^2(G,l^2(H_\sigma)) | ||f|| < \infty (not \; l^2) ,\; f(y\xi)(s) = f(y)(\xi s) \;(y \in G, \xi,s \in H)\}.
+  \end{align*}
+  We define $\Phi : l^2(G) \rightarrow \mathcal{F}$ by $\Phi(f)(y)(\xi) := f(y\xi)$ for $f \in l^2(G)$, $y \in G$, $\xi \in H)$.
+  linear is OK.
+
+  Surjectivity: For $f \in \mathcal{F}$, $g(y):= f(y,e)$.
+
+  Inner product preserving: For $f, g \in l^2(G)$,
+  \begin{align*}
+    \<\Phi(f),\Phi(g)\> &= \int_{G/H} \<\Phi(f)(x),\Phi(g)(x)\>_\sigma d \mu_{G/H}(xH)\\
+    &=\int_{G/H} \int_H \Phi(f)(x,s) \overline{\Phi(g)(x,s)} d\mu_H(s)d\mu_{G/H}(xH)\\
+    &=\int_{G/H} \int_H f(xs) \overline{g(xs)} d\mu_H(s)d\mu_{G/H}(xH)\\
+    &=\int_Gf(x)\overline{g(x)}d\mu_G(x) = \<f,g\>
+  \end{align*}
+  We suffices to check the following diagram is commutative.
+  \[
+  \xymatrix{
+    l^2(G) \ar[r]^{\lambda_G} \ar[d]^{\Phi}& l^2(G) \ar[d]^{\Phi} \\
+    \mathcal{F} \ar[r]^{\ind_H^G(\lambda_H)} & \mathcal{F}.
+  }
+  \]
+  Let $\sigma = \ind_H^G(\lambda_H)$.
+  For $f \in l^2(G)$, $g, y \in G$, $\xi \in H$,
+  \begin{align*}
+    (\sigma(g) \circ \Phi)(f)(y, \xi) &= \sigma(g)( \Phi(f)) (y,\xi) = \Phi(f)(g^{-1}y,\xi) = f(g^{-1}y\xi),\\
+    (\Phi \circ \lambda_G(g))(f)(y,\xi) &= \Phi(\lambda_G(g)(f))(y,\xi) = (\lambda_G(g)(f))(y\xi) = f(g^{-1}y\xi).
+  \end{align*}
+\end{proof}

@@ -1,0 +1,119 @@
+\section{Group von Neumann algebra}
+
+Let $G$ be a locally von Neumann algebra and $\bigtriangleup = \bigtriangleup_G$ be a modular function.
+Let $\mu = \mu_G$ be a left Haar measure on $G$.
+
+\begin{lemma}
+  Let $H$ be a open subgroup of $G$. Then, $\mu|_H$ is also a left Haar measure.
+\end{lemma}
+
+\begin{proof}
+  Suppose $K \subset G$ is a compact subset s.t. $\mu(K)>0$.
+  By $G = \sqcup g_i H$ and compactness of $K$, $K \subset \cup_{k=1}^n g_k H$.
+  $\mu(K) \leq \sum \mu(K) = 0$. Contradiction.
+\end{proof}
+
+
+\begin{definition}
+  We define a group von Neumann algebra $L(G)$ by the weak closure of $\lambda(G)$, where $\lambda$ is a left regular representation.\\
+  When $\lambda$ is a right regular representation, we denote $R(G)$. \\
+\end{definition}
+
+$C_c(G)$ is a left Hilbert algebra [\ref{nonunimodular}]. 
+Then, modular operator $\bigtriangleup_{C_c(G)}$ of $C_c(G)$ and modular function $\bigtriangleup_G$ are correspondence.
+So, $L(G)$ has a J-map.
+
+\begin{definition}[\cite{takesaki2013theory2}]
+  The weight on $L(G)$ associated with the full Hilbert algebra is called the Plancherel weight and denoted by $\psi_G$.
+\end{definition}
+
+\subsection{Fourie algebras}
+
+\begin{definition}[\cite{takesaki2013theory2}]
+  $A(G) := \{ \xi*\eta^{\vee} | \xi, \eta \in L^2(G)\}$ is called the Fourie algebra, where $\xi^{\vee}(g) = \xi(g^{-1})$. \\
+  Identifying $A(G)$ with $L(G)_*$ under the correspondence $\overline{\eta}*\xi^{\vee} \leftrightarrow \omega_{\xi,\eta}$,
+  $A(G)$ is a commutative Banach algebra.
+\end{definition}
+
+We remark that existence of J-map implies $M_* = \{\omega_{\xi,\eta}|\xi, \eta \in H\}$.
+
+
+\begin{theorem}
+  $A(G)$ is a dense *-subalgebra of $C_0(G)$.
+\end{theorem}
+
+\begin{lemma}
+  For $\xi$, $\eta \in L^2(G)$, $\xi*\eta \in C_0(G)$, and $\<\lambda(g)\xi,\eta\> = (\overline{\eta}*\xi^{\vee})(g)$.
+\end{lemma}
+
+\begin{proof}
+  In the case of $C_c(G)$, OK.
+  $|\<\lambda(g)\xi, \eta\> - \<\lambda(g)\xi_n, \eta_n\>|$ convergences to $0$ uniformly.
+\end{proof}
+
+\begin{proof}[proof of theorem]
+  We only prove multiplicative.
+  We define $W: L^2(G \times G) \rightarrow L^2(G \times G)$ by $(W\xi)(g,h) = \xi(g,gh)$.
+  Then, $W \in L^\infty(G) \overline{\otimes} L(G)$ and $W^*(\lambda(g) \otimes 1)W = \lambda(g)\otimes\lambda(g)$.\\
+  We deine $\pi : L(G) \rightarrow B(L^2(G \times G))$ by $x \mapsto W^*(x\otimes1)W$.
+  By the previous remark, $\omega_{\xi,\eta} = ^{t}\pi (\omega_{\xi_1,\eta_1}\otimes\omega_{\xi_2,\eta_2})$, for $\xi_1,\xi_2,\eta_1\eta_2 \in L^2(G)$.
+  $\overline{\eta_1}*\xi_1^{\vee}(g)\overline{\eta_2}*\xi_2^{\vee}(g) = \overline{\eta}*\xi^{\vee}(g)$.
+\end{proof}
+
+\subsection{Hecke algebras}
+
+Let $G$ be a locally compact totally disconnected group (i.e. locally profinite group) and $\mu$ be a Haar measure on $G$.
+
+\begin{definition}
+  For compact open subset $K$, we define the avraging projection $p_K$ associated to $K$ by
+  \begin{align*}
+    p_K := \frac{1}{\mu(K)} \int_K \lambda_G(k)d\mu(k).
+  \end{align*}
+\end{definition}
+
+Let $K$ be a compact open subgroup of $G$. 
+
+\begin{definition}
+  A Hecke algebra $C_c(G,K)$ associated to a Hecke pair $(G,K)$is defined by $\chi_K * C_c(G) * \chi_K \subset Cc(G)$ or $p_KC_cp_K \subset L(G)$.\\
+  A Hecke von Neumann algebra $L(G,K)$ associated to a Hecke pair $(G,K)$ by $p_KL(G)p_K$.
+\end{definition}
+
+\begin{remark}
+  Since $p_K$ is left $K$ invariant, $C_c(G,K) = \chi_K * C_c(G) * \chi_K = \{f \in C_c(G) | f(kgk') = f(g)$ for all $k,k' \in K\}$.
+\end{remark}
+
+\begin{remark}
+  Since the above remark, $\rm{dim}C_c(G,K) = |K \backslash G / K|$. 
+\end{remark}
+
+\begin{remark}
+  $p_K \lambda_G(g) p_K = \chi_{KgK}$ in $L(G)$.
+\end{remark}
+
+\begin{proof}
+  Since $K$ is a compact open subgroup, 
+  \begin{align*}
+    KgK = \bigcup_{k \in K} kgK = \bigcup_{fin} kgK = \bigsqcup^{N}_{i=1}k_igK
+  \end{align*}
+  by proposition\ref{subgr}.
+  Then, $\mu(KgK)=N\mu(K)$.
+  There exist compact open sebsets $K_i$ of $K$ s.t. $K_i g K = k_i g K$, since $K \ni k \mapsto kgK \in KgK$ is continuous.
+  Then, $K_i = K \cap k_i g K g^{-1}$ and $\mu(K_i) = \frac{1}{N}\mu(K)$, since $k_i k_j^{-1}:K_j \rightarrow K_i$ is bijective.
+  \begin{align*}
+    p_K \lambda_G(g) p_K
+    &= \int_K \int_K \lambda(kgk') d\mu(k') d\mu(k) \frac{1}{\mu(K)^2}\\
+    &= \sum_{i=1}^N \int_{K_i} \int_K \lambda(kgk') d\mu(k') d\mu(k) \frac{1}{\mu(K)^2}\\
+    &= \sum_{i=1}^N \int_{K \cap (k_i g)^{-1} K g} \int_K \lambda(k_ighk')d\mu(k') d\mu(h) \frac{1}{\mu(K)^2}\\
+    &= \sum_{i=1}^N \lambda(k_ig)\int_{K \cap (k_i g)^{-1} K g} \lambda(h) \int_K \lambda(k)d\mu(k') d\mu(h) \frac{1}{\mu(K)^2}\\
+    &= \sum_{i=1}^N \lambda(k_ig)\int_{K \cap (k_i g)^{-1} K g} (\lambda(h) p_K) (= p_K) d\mu(h) \frac{1}{\mu(K)}\\
+    &= \sum_{i=1}^N \lambda(k_ig)p_K \frac{1}{N}.\\
+  \end{align*}
+  \begin{align*}
+    \chi_{KgK}
+    &=\frac{1}{\mu(KgK)} \int_{KgK} \lambda(h)d\mu(h)\\
+    &= \frac{1}{N\mu(K)}\sum_{i=1}^N \int_{k_i gK} \lambda(h)d\mu(h)\\
+    &= \frac{1}{N\mu(K)}\sum_{i=1}^N\lambda(k_ig) \int_{K} \lambda(h)d\mu(h)\\
+    &= \frac{1}{N}\sum_{i=1}^N\lambda(k_ig) p_K.\\
+  \end{align*}
+\end{proof}
+

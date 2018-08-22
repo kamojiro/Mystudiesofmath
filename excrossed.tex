@@ -1,0 +1,38 @@
+\subsection{crossed product}
+
+ $x = \sum \pi(a_g)\lambda_g = \pi(a) \lambda_g$, $y = \sum \pi(b_h)\lambda_h = \pi(b)\lambda_h$.
+
+When $X$ is a finite measure space and, we define state $\tau$ by $\<\cdot(1\otimes\delta_e),1 \otimes \delta_e\>$.
+It satisfies $\mu \circ E = \tau$.
+
+\begin{theorem}
+  $\bigtriangleup (\hat{x}) = \sum \widehat{\pi(\frac{d\mu}{d\mu\circ\alpha_{g^{-1}}}a_g)\lambda_g}$.
+\end{theorem}
+
+\begin{proof}
+  $E(yx^*)= \sum \overline{a_g}b_g$.
+  $E((\bigtriangleup x)^*y) = \sum \alpha_{g^{-1}} (a'_gb_g)$.
+  Since $\<Sx,Sy\> = \<y,\bigtriangleup x \>$, $\sum \mu(\overline{a_g}b_g) = \sum \mu \circ \alpha_{g^{-1}}(a'_gb_g) = \sum \mu (\frac{d\mu\circ\alpha_{g^{-1}}}{d\mu}\overline{a_g}b_g)$.
+\end{proof}
+
+Let $\rho$ be a right regular representation, $\xi_0 = 1 \otimes \delta_e$ and $x = \pi(\alpha_g(a_g))\lambda_g)$.
+Then, $x\xi_0 = a_g \otimes \delta_g$. Then,
+\begin{align*}
+  \bigtriangleup x \xi_0 &=\frac{d{\mu \circ \alpha_g}}{d\mu}a \otimes \delta_g;\\
+  \bigtriangleup^{it} x \xi_0 &=\left(\frac{d{\mu \circ \alpha_g}}{d\mu}\right)^{it}a \otimes \delta_g;\\
+  Jx\xi_0 &=\alpha_g\left(\left(\frac{d{\mu \circ \alpha_g}}{d\mu}\right)^{-\frac{1}{2}}\overline{a}\right) \otimes \delta_{g^{-1}}\\
+  &= \left(\frac{d{\mu \circ \alpha_g}}{d\mu}\right)^{\frac{1}{2}}\alpha_g(\overline{a}) \otimes \delta_{g^{-1}}
+  =:  u_g(\overline{a}) \otimes \delta_{g^{-1}};\\
+  \sigma_t^{\varphi}(\pi(f)) &= \pi (f), \, 
+  \sigma_t^{\varphi}(\lambda_h) = \pi\left( \left(\frac{d{\mu \circ \alpha_g}}{d\mu}\right)^{it}\right) \lambda_h;\\
+  J\pi(f)J &= \overline{f} \otimes 1, \, 
+  J\lambda_hJ=u_h \otimes \rho_h:
+\end{align*}
+
+$\mu \circ \alpha_g =: g^{-1}\mu$.\\
+canonical implementation?
+
+\begin{theorem}
+  $M_0^\varphi \supset L^\infty(X)$. \\
+  Especially, if for all $g \in G$, $\alpha_g$ is probability measure presearving, $M_0^\varphi = M$.
+\end{theorem}

@@ -1,0 +1,189 @@
+\section{Groupoid C*-algebras}
+\subsection{groupoid}
+
+\begin{definition}
+  An $G$ is a groupoid
+  if $G$ is a set, has a subset $G^{(0)}$ of $G$ (called by a unit space),
+  maps $s,r:G \rightarrow G^{(0)}$ and
+  \begin{align*}
+    G^{(2)} \rightarrow G,\, (x,y) \mapsto xy, 
+  \end{align*}
+  where $G^{(2)} := \{(x,y)|s(x)=r(y)\}$,
+  and satisfies the following properties:
+  \begin{enumerate}
+  \item for each $x \in G^{(0)}$, $x =s(x) = r(x)$;
+  \item for each $(x,y)\in G^{(2)}$, $s(xy) = s(y)$ and $r(xy) = r(x)$;
+  \item for each $(x,y) \in G^{(2)}$ and $(y.z) \in G^{(2)}$, $(xy)z = x(yz)$;
+  \item for each $x \in G$, $r(x)x = x = x s(x)$;
+  \item for each $x \in G$, there exists the unique $x^{-1}$ s.t. $xx^{-1} = r(x)$ and $x^{-1} x = s(x)$:
+  \end{enumerate}
+\end{definition}
+
+\begin{remark}
+  Let $\Gamma$ be a group and $X$ be a $\Gamma$-space.
+  Then, $X \rtimes \Gamma$ is a groupoid under the multiplication $(x,g)(y,h) = (y,gh)$,
+  $s(x,g)= x$ and $r(x,g) = g.x$.
+\end{remark}
+
+We assume $G$ is a locally compact $\acute{e}tale$ groupoid and $G^{(0)}$ is compact open.
+\begin{definition}[\cite{suzuki2017almost}]
+  Let $C$ be a compact subset of $G$ and $\varepsilon > 0$.
+  Let $K$ be a compact subgroupoid of $G$ containing the unit space $G^{(0)}$.
+  We say thet $K$ is $(C,\varepsilon)$-invariant if the following inequality holds for all $s \in G^{(0)}$.
+  \begin{align*}
+    \frac{\sharp(CKs\backslash Ks)}{\sharp(Ks)} < \e.
+  \end{align*}
+\end{definition}
+
+\begin{definition}[\cite{suzuki2017almost}]
+  We say that a groupoid $G$ is almost fintie if it satisfies teh following conditions.
+  \begin{enumerate}
+  \item The union of all compact open $G$-sets covers $G$.
+    \item For any compact subset $C \subset G$ and $\e > 0$, there is a $(C,\e)$-invariant elementary subgroupoid $K$ of $G$.
+  \end{enumerate}
+\end{definition}
+
+\begin{proposition}
+  Let $G = X \rtimes \Gamma$, where $X$ is a compact space and $\Gamma$ is a discrete group.
+  If $G$ is alamost finite, then $\Gamma$ is amenable. 
+\end{proposition}
+
+\begin{proof}
+  We show that $\Gamma$ has F{\o}lner condition.
+  Let $E$ be a compact subset of $\Gamma$ and $\e > 0$.
+  Let $p:X \times \Gamma \rightarrow \Gamma$ be a projection onto $\Gamma$.
+  By almost fintieness of $G$, there exists a $(X\times(E\cup E^{-1}),\e)$-invariant elementary subgroupoid $K$ of $G$.
+  So, for all $s \in G^{(0)}$.
+  \begin{align*}
+    \frac{\sharp((X \times (E \cup E^{-1}))Ks\backslash Ks)}{\sharp(Ks)} < \e.
+  \end{align*}
+  Let $F := p(Ks)$.
+  Then, $\sharp(Ks) = \sharp (F)$.
+  Let $s \in G^{(0)}$ and $t \in E$.
+  Then, we remark $\sharp ((X\times \{t\})Ks) = \sharp (tF)$ and $\sharp(Ks\backslash ((X\times \{t\})Ks)) = \sharp (((X\times \{t^{-1}\})Ks)\backslash Ks)$.
+  \begin{align*}
+    \frac{\sharp((X\times\{t\})Ks\backslash Ks)}{\sharp (Ks)} \leq\frac{\sharp((X\times E)Ks\backslash Ks)}{\sharp (Ks)} < \e
+  \end{align*}
+  and
+  \begin{align*}
+    \frac{\sharp(Ks\backslash((X\times\{t\})Ks))}{\sharp (Ks)} = \frac{\sharp
+      ((X\times \{t^{-1}\})Ks\backslash Ks)}{\sharp (Ks)} < \e
+  \end{align*}
+  
+  
+  
+  
+\end{proof}
+
+\subsection{groupoid C*-algebras}
+
+We construct the C*-algebra from a groupoid.
+We assume $G$ is a locally compact $\acute{e}tale$ groupoid and $G^{(0)}$ is compact open.
+
+We consider $C_c(G)$.
+For $x \in G^{(0)}$, we define
+\begin{align*}
+  G_x := \{y \in G|s(y)=x\} \,and\, G^x := \{y \in G|r(y)=x\}.
+\end{align*}
+For $f ,g \in C_c(G)$, we define
+\begin{align*}
+  f*g(x) := \sum_{yz = x}f(y)g(z) = \sum_{\beta \in G_x}f(x\beta^{-1})g(\beta).
+\end{align*}
+
+\begin{proposition}
+  Let $\Gamma$ be a discrete group and $X$ be a compact $\Gamma$-space.
+  Then,
+  \begin{align*}
+    C_r^*(G) = C(X)\rtimes\Gamma.
+  \end{align*}
+\end{proposition}
+
+\begin{proof}
+  \begin{align*}
+    C(X)\rtimes\Gamma &\rightarrow C_r^*(G),\\
+    f &\mapsto \varphi(f),\\
+    s &\mapsto 1\otimes \delta_s,
+  \end{align*}
+  where
+  \begin{align*}
+    \varphi(f) := 
+    \begin{cases}
+      f(x) & (x \in G^{(0)}=X\times\{e\})\\
+      0 & (x \notin G^{(0)})
+    \end{cases}
+  \end{align*}
+\end{proof}
+
+\begin{remark}
+  When X is a locally compact space including a non-compact case,
+  the map
+  \begin{align*}
+    fu_s \mapsto \varphi(f)(1\otimes \delta_e)
+  \end{align*}
+  gives an isomorphism from $C_0(X)\rtimes \Gamma$ onto $C_r^*(X\rtimes\Gamma)$.
+\end{remark}
+
+\subsection{orbit equivalence relation groupoid}
+Let $X$ be a locally compact space and $\Gamma$ be a contable discrete group.
+\begin{definition}
+  We define a orbit equivalence relation groupoid associated to $\Gamma \curvearrowright X$, dneoted by $\mathcal{R}_{\Gamma \curvearrowright X}$ or $\mathcal{R}$.
+  \begin{align*}
+    \mathcal{R} &:= \{(\gamma \Gamma_x,x) | x \in X, \, \gamma \in \Gamma\},\\
+    \mathcal{R}^{0} &= \{(\Gamma_x,x) | x \in X\},
+  \end{align*}
+  and for each $(\gamma \Gamma_x,x) \in \mathcal{R}$, $(\gamma \Gamma_x,x)^{-1} = (\gamma^{-1} \Gamma_{\gamma x},\gamma x)$
+\end{definition}
+\begin{remark}
+  This groupoid is principal.
+\end{remark}
+
+As below, we consider a orbit equivalnce relation groupoid $\mathcal{R}_{\Gamma \curvearrowright X}$.
+\begin{lemma}
+  Let $C$, $C_1$, $C_2$ be compact subsets of $X$ and $\gamma,\,\tau  \in \Gamma$.
+  Then,
+  \begin{align*}
+    \chi_{C\times \{\gamma\}}^* &= \chi_{\gamma C \times \{\gamma^{-1}\}}\\
+    \chi_{C_1 \times \{\gamma\}}* \chi_{C_2 \times \{\tau\}} &= .
+  \end{align*}
+  Espesially, when $X$ is compact,
+  $\chi_{X \times \{\gamma\}}$ is a unitary and $\chi_{X \times \{\gamma\}} * \chi_{X\times \{\tau\}} = \chi_{X\times \{\gamma\tau\}}$.
+\end{lemma}
+
+\begin{proof}
+  Let $\xi, \eta \in C_c(G)$.
+  Let $V = \chi_{C\times \{\gamma\}}$ and $W = \chi_{\gamma C \times \{\gamma^{-1}\}}$.
+  For $x \in X$,
+  \begin{align*}
+    \<V\xi,\eta\>(x) &= \sum_{\beta \in \mathcal{R}_x} \overline{(V\xi)}(\beta)\eta(\beta)\\
+    &= \sum_{\beta \in \mathcal{R}_x} \sum_{\alpha \in \mathcal{R}_{s(\beta)=x}} \chi_{C\times \{\gamma\}}(\beta \alpha^{-1})\overline{\xi}(\alpha)\eta(\beta)
+  \end{align*}
+  Let $\beta = (x, \sigma \Gamma_x)$ and $\alpha = (x, \theta \Gamma_x)$.
+  Then, $\beta\alpha^{-1} = (\theta x, \sigma \theta^{-1}\Gamma_{\theta x})$.
+  Therefore,
+  \begin{align*}
+    \beta \alpha^{-1} \in C \times \{\gamma\} &\Leftrightarrow \theta x \in C \;and\; \sigma \theta^{-1}\Gamma_{\theta x} = \gamma \Gamma_{\theta x} \\
+    &\Leftrightarrow \theta x \in C \;and\; \sigma \Gamma_x = \gamma \theta \Gamma_x.
+  \end{align*}
+  So,
+  \begin{align*}
+    \<V\xi,\eta\>(x) &= \sum_{\sigma \in \Gamma/\Gamma_x} \overline{\xi}(x,\gamma^{-1}\sigma\Gamma_x)\eta(x,\sigma\Gamma_x) \chi_C(\gamma^{-1}\sigma x).
+  \end{align*}
+  Similarily,
+  \begin{align*}
+    \<\xi,W\eta\>(x) = \sum_{\beta \in \mathcal{R}_x}\sum_{\alpha \in \mathcal{R}_x}\overline{\xi}(\beta)\chi_{\gamma C \times \{\gamma^{-1}\}}(\beta\alpha^{-1})\eta(\alpha)
+  \end{align*}
+  Then,
+  \begin{align*}
+    \beta \alpha^{-1} \in \gamma C \times \{\gamma^{-1}\} &\Leftrightarrow \theta x \in \gamma C \;and\; \sigma \theta^{-1}\Gamma_{\theta x} = \gamma^{-1} \Gamma_{\theta x} \\
+    &\Leftrightarrow \gamma^{-1}\theta x \in C \;and\; \sigma \Gamma_x = \gamma^{-1} \theta \Gamma_x.
+  \end{align*}
+  So,
+  \begin{align*}
+    \<\xi,W\eta\>(x) &= \sum_{\sigma \in \Gamma/\Gamma_x} \overline{\xi}(x,\sigma\Gamma_x)\eta(x,\gamma\sigma\Gamma_x) \chi_C(\sigma x)\\
+    &= \sum_{\theta = \gamma \sigma \in \Gamma/\Gamma_x} \overline{\xi}(x,\gamma^{-1}\theta\Gamma_x)\eta(x,\theta\Gamma_x) \chi_C(\gamma^{-1}\theta x).
+  \end{align*}
+  So, $\<V\xi,\eta\> = \<\xi,W\eta\>$ and therefore $V^* = W$.
+  
+
+
+\end{proof}

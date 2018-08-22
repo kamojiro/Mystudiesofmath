@@ -1,0 +1,53 @@
+\section{Stable Rank}
+
+\begin{definition}
+  Let $A$ be a unital C*-algebra. For each $n \in \N$, define
+  \begin{align*}
+    {\rm Lg}_n(A) := \{(a_1,a_2, \ldots, a_n) \in A^n| Aa_1 + Aa_2 + \cdots + Aa_n =A\}.
+  \end{align*}
+  Then the stable rank of $A$ is defined to be the value
+  \begin{align*}
+    {\rm min}\{n \in \N | {\rm Lg}_n(A)\, is\, norm\, dense\, in\, A\}.
+  \end{align*}
+\end{definition}
+
+\begin{proposition}[\cite{rieffel1983dimension}, Proposition 3.1]
+  A unital C*-algebra has stable rank one if and only if the set of invertible elements of $A$ is norm dense in $A$.
+\end{proposition}
+
+\begin{definition}
+  Let $A$ be a C*-algebra. Denoted by $\rm{ZD}(A)$ the set of two-sided zero divisor in $A$, i.e.,
+  the set of elements $x$ in $A$ for which $ax=xb=0$ for some non-zero elements $a$ and $b$ in $A$.
+\end{definition}
+
+\begin{proposition}[\cite{rordam1991structure}, proposition 3.2]
+  For each unital C*-algebra $A$, $\overline{{\rm ZD}}(A)$ consists precisely of all elements $x$ in $A$ that are not one-sided invertible. 
+\end{proposition}
+
+\begin{proof}
+  Let $X$ be a set of all  elements $x$ in $A$ that are not one-sided invertible.
+  At first, we show that ${\rm ZD}(A) \subset X$.
+  Let $x \in {\rm ZD}(A)$.
+  Since $\mathcal{R}(x) \neq H$ and $\ker(x) \neq H$, $x \in X$.
+  We show that $X$ is closed.
+  Suppose $a, x \in A$ and $x_n \in X$ s.t. $ax=1$ and $x_n \rightarrow x$.
+  There exists $n$ s.t. $\|ax_n -1\| < 1$.
+  So, $ax_n \in {\rm GL}(A)$, this is contradiction.
+  So, we suffices to show that $\overline{{\rm ZD}}(A) \supset X$. Let $x \in X$ and $\varepsilon > 0$.
+  Then, neither $|x|$ nor $|x^*|$ is invertible
+  (since if $|x|$ is invertible, $x^*x = |x|^2$ is invertible).
+  Suppose $f_\varepsilon ,g : \R_+ \rightarrow \R_+$ be continuous funsctions s.t.
+  \begin{align*}
+    f(x) := \left\{\begin{gathered} 0\;\;  (x \in [0,\varepsilon]\\
+    x-\varepsilon\;\; (x \in [\varepsilon, \infty) \end{gathered} \right.,\,
+    g:\left\{\begin{gathered} g(0) = 1\\
+    {\rm supp}(g) \subset [0,\varepsilon]. \end{gathered} \right.
+  \end{align*}
+  Let $x = v|x|$ by polar decomposition.
+  Let $a := g(|x^*|)$, $b := g(|x|)$ and $x_\varepsilon := v f_\varepsilon (|x|)$.
+  Then, $ax_\varepsilon = 0 = x_\varepsilon b$.
+  Since $0 \in \sigma(|x)$ and $0 \in \sigma(|x^*|)$,
+  $a,b \neq 0$.
+  So, $x_\varepsilon \in {\rm ZD}(A))$.
+  Since $\|x - x_\varepsilon\| \leq \varepsilon$, $x \in \overline{{\rm ZD}}(A)$.
+\end{proof}

@@ -1,0 +1,73 @@
+\begin{thebibliography}{Ham79}
+
+\bibitem[BO08]{brown2008c}
+Nathanial~Patrick Brown and Narutaka Ozawa.
+\newblock {\em C*-algebras and finite-dimensional approximations}, volume~88.
+\newblock American Mathematical Soc., 2008.
+
+\bibitem[CE77]{choi1977injectivity}
+Man-Duen Choi and Edward~G Effros.
+\newblock Injectivity and operator spaces.
+\newblock {\em Journal of functional analysis}, 24(2):156--209, 1977.
+
+\bibitem[Ham79]{hamana1979injective}
+Masamichi Hamana.
+\newblock Injective envelopes of c*-algebras.
+\newblock {\em Journal of the Mathematical Society of Japan}, 31(1):181--197,
+  1979.
+
+\bibitem[Kad52]{kadison1952generalized}
+Richard~V Kadison.
+\newblock A generalized schwarz inequality and algebraic invariants for
+  operator algebras.
+\newblock {\em Annals of Mathematics}, pages 494--503, 1952.
+
+\bibitem[Neb88]{nebbia1988amenablitz}
+C.~Nebbia.
+\newblock Amenablitz and kunze-stein property for groups acting on a tree.
+\newblock {\em Pacific Journal of Mathematics}, 135(2), 1988.
+
+\bibitem[OP78]{olesen1978some}
+Dorte Olesen and GERT~KJ{\AE}RG{\AA}RD PEDERSEN.
+\newblock Some c*-dynamical systems with a single kms state.
+\newblock {\em Mathematica Scandinavica}, 42(1):111--118, 1978.
+
+\bibitem[Rie83]{rieffel1983dimension}
+Marc~A Rieffel.
+\newblock Dimension and stable rank in the k-theory of c*-algebras.
+\newblock {\em Proceedings of the London Mathematical Society}, 3(2):301--333,
+  1983.
+
+\bibitem[R{\o}r91]{rordam1991structure}
+Mikael R{\o}rdam.
+\newblock On the structure of simple c*-algebras tensored with a uhf-algebra.
+\newblock {\em Journal of functional analysis}, 100(1):1--17, 1991.
+
+\bibitem[Suz17]{suzuki2017almost}
+Yuhei Suzuki.
+\newblock Almost finiteness for general etale groupoids and its applications to
+  stable rank of crossed products.
+\newblock {\em arXiv preprint arXiv:1702.04875}, 2017.
+
+\bibitem[Suz18]{suzuki2018complete}
+Yuhei Suzuki.
+\newblock Complete descriptions of intermediate operator algebras by
+  intermediate extensions of dynamical systems.
+\newblock {\em arXiv preprint arXiv:1805.02077}, 2018.
+
+\bibitem[Tak72]{takesaki1972conditional}
+Masamichi Takesaki.
+\newblock Conditional expectations in von neumann algebras.
+\newblock {\em Journal of Functional Analysis}, 9(3):306--321, 1972.
+
+\bibitem[Tak13]{takesaki2013theory2}
+Masamichi Takesaki.
+\newblock {\em Theory of operator algebras II}, volume 125.
+\newblock Springer Science \& Business Media, 2013.
+
+\bibitem[Ued99]{ueda1999amalgamated}
+Yoshimichi Ueda.
+\newblock Amalgamated free product over cartan subalgebra.
+\newblock {\em Pacific Journal of Mathematics}, 191(2):359--392, 1999.
+
+\end{thebibliography}

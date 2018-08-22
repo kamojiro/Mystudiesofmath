@@ -1,0 +1,595 @@
+
+\section{modular theory}
+
+\subsection{Left Hilbert algebra}
+\begin{definition}
+  Let $A$ be a complex involution$\sharp$ algbera. \\
+  Let H be a completion of A. \\
+  A is called by left Hilbert algebra, if it satisfies the following properties.\\
+  \begin{itemize}
+    \item For each $\xi \in A$, $A \ni \eta \rightarrow \xi\eta$ is continuous;
+    \item For any $\xi,\eta,\zeta \in A$, $\< \xi\eta,\zeta\>=\<\eta,\xi\zeta\>$;
+    \item $A^2 \subset A$ is dense;
+    \item $A \ni \xi \rightarrow \xi^\sharp$:preclosed:
+  \end{itemize}
+\end{definition}
+
+\begin{definition}
+  $S^A$ is defined by the closure of $A \ni \xi \rightarrow \xi^\sharp$.\\
+  We often write S instead of $S^A$.
+\end{definition}
+
+\begin{definition}
+  $\mathcal{L}(A) := \overline{span\{L_\xi | \xi \in A\}}^w$.
+\end{definition}
+
+\begin{proposition}
+  \begin{itemize}
+    \item For any $\eta \in \mathcal{D}_{S^*}$, $A \ni \xi \rightarrow \xi\eta$ is preclosed and we call it $R_\eta$;
+    \item Then, $(R_\eta)^*\xi=L_\xi S^*\eta (\xi \in A$);
+  \end{itemize}
+\end{proposition}
+
+\begin{corollary}
+  If $\eta \in A'$, then $S^*\eta \in A'$ and $S^*(S^*\eta)=\eta$, $R_{S^*\eta}=(R_\eta)^*$.
+\end{corollary}
+
+\begin{corollary}
+  If $\eta_1,\eta_2 \in A'$ and $x' \in \mathcal{L}(A)'$, then $R_{\eta_1}x'\eta_2 \in A'$ and
+  $S^*R_{\eta_1}x'(\eta_2)=R_{S^*\eta_2}{x'}^*S^*\eta_1$, $R_{R_{\eta_1}x'(\eta_2)}=R_{\eta_1}x'R_{\eta_2}$.
+\end{corollary}
+
+\begin{corollary}
+  If $\eta \in \mathcal{D}_{S^*}$, then there exists $\{\eta_n\}, \{\zeta_n\} \subset A'$, s.t. $R_{\eta_n}\zeta_n \rightarrow \eta$ and $S^*R_{\eta_n}\zeta_n \rightarrow S^*\eta$.
+\end{corollary}
+
+\begin{definition}
+  $A':=\{\eta \in \mathcal{D}_{S^*} | R_\eta is bounded \}$
+\end{definition}
+
+\begin{proposition}
+  Suppose $\eta,\zeta \in H$ and $x' \in B(H)$.
+  The following are equivalent.
+  \begin{enumerate}
+    \item $\eta \in A'$, $S^*\eta=\zeta$, $R_\eta=x'$;
+    \item for any $\xi \in A$, $L_\xi\eta = x'\xi$, $L_\xi\zeta={x'}^*\xi$:
+  \end{enumerate}
+\end{proposition}
+
+By the above proposition, we get a right Hilbert module$A'$,which is endowed the operations
+\begin{itemize}
+  \item $\eta_1\eta_2=R_{\eta_2}\eta_1;$
+  \item $\eta^{\flat}=S^*\eta:$
+\end{itemize}
+
+\begin{theorem}
+  Let $A_1$ be a dense subalgebra of right Hilbert algebra$A_2$.
+  Then, $A_1$ is a right Hilbert subalgebra of $A_2$.
+  Moreover, the followins are equvalent.
+  \begin{itemize}
+    \item ${A_1}'={A_2}'$;
+    \item ${A_1}''={A_2}''$;
+    \item $S^{A_1}=S^{A_2}$:
+  \end{itemize}
+\end{theorem}
+
+\subsection{weight}
+\begin{proposition}
+  Let M be a vN algebra with cyclic separating vector $\xi_0$.\\
+  For each $\xi \in H$, We define $\mathcal{D}_{L_\xi^o}$, $L_\xi^o(x'\xi_0) = x'\xi$.
+  Then,
+  \begin{align*}
+    \mathfrak{P} :&= \{ \xi \in H |L_\xi^o : \mbox{positive} \}\\
+    &= \{\xi \in H | {\omega'}_{\xi,\xi_0}\geq 0 \}\\
+    &= \{A\xi_0 | A:\mbox{positive selfadjoint affiliated to} M, \xi_0 \in \mathcal{D}_A\}
+  \end{align*}
+\end{proposition}
+
+\begin{proof}
+  Friedrichs extention.
+\end{proof}
+
+\begin{lemma}
+  Let M be a vN algebra with cyclic separating vector $\xi_0$.\\
+  Then, for any $\phi \in M_*^+$, there exists an unique $\xi \in \mathfrak{P}_S$ s.t. $\phi = \omega_{\xi}$.
+  Specially, there exists positive selfadjoint operator $A$ affiliated to M s.t. $\phi = \omega_{A\xi_0}$.
+\end{lemma}
+
+\begin{proof}
+  There exists $\zeta \in H$ s.t. $\phi = \omega_\xi$.\\
+  $\omega_{\zeta,\xi_0} = v' |\omega_{\zeta,\xi_0}|$.\\
+  $\xi = v'^*\zeta$.
+\end{proof}
+
+\begin{theorem}
+  Let $A \subset H$ be a left Hilbert algebra. Then,
+  \begin{itemize}
+    \item $JA''=A'$, $JA'=A''$;
+    \item $S^*J\xi = JS\xi (\xi \in A'')$;
+    \item $SJ\eta = JS^*\eta (\eta \in A')$;
+    \item $R_{J\xi} = JL_\xi J$, $L_{J\eta} = JR_\eta J$:
+  \end{itemize}
+\end{theorem}
+
+\begin{definition}
+  We call $\varphi : M^+ \rightarrow [0,\infty]$ weight, when it is $\R_\geq$-linear.
+  \begin{itemize}
+    \item fatithful if $\varphi(a)=0 \Leftrightarrow a=0$;
+    \item semifinite if $\mathfrak{M}_\varphi^+ = \mathfrak{N}_\varphi = \{x \in M^+ | \varphi(x)<\infty\}$;
+    \item normal if sum of $M_*^+$:
+  \end{itemize}
+\end{definition}
+
+\begin{proposition}
+  Let $\varphi$ be a weight on $M$. The followings are equivalent.
+  \begin{itemize}
+    \item commute with $\sigma$-w sum;
+    \item commute with increasing net;
+    \item lower $\sigma$-w semicontinuous;
+    \item sup of $M_*^+$;
+    \item sum of $M_*^+$:
+  \end{itemize}
+\end{proposition}
+
+\begin{proof}
+  ($2 \Rightarrow 5$): Connes' inverse theorem.
+\end{proof}
+
+\begin{theorem}
+  Let $A \subset B$ be a left Hilbert algebra. \\
+  We define weight $\varphi_A$ on $M^+$ by
+  \begin{align*}
+    \varphi_A(a) = \left\{ \begin{array}{ll} ||\xi||^2 & (\exists \xi \in A'' s.t. a^{\frac{1}{2}}=L_{\xi})\\
+      \infty & otherwise
+    \end{array} \right.
+  \end{align*}
+  Then, $\varphi$ is a semifinite faithful normal weight.
+\end{theorem}
+
+By the following lemma, increading and additive follows.
+\begin{lemma}
+  Let $a$, $b \in M^+$ s.t. $a \geq b$. \\
+  We define $v:[b^{\frac{1}{2}}H]\oplus[b^{\frac{1}{2}}H]^{\perp} \rightarrow H$ by $b^{\frac{1}{2}}\eta + \theta \mapsto a^{\frac{1}{2}}\eta$. \\
+  Then, $v$ belongs to $M$ and $b^{\frac{1}{2}}v^*a^{\frac{1}{2}}=a$.
+\end{lemma}
+
+\begin{proof}(additive)
+  Let $a^{\frac{1}{2}}=L_\xi$ and $b^{\frac{1}{2}}=L_\xi$. Then, $v^*v+w^*w$ is a projection. $(a+b)^{\frac{1}{2}}=L_{v^*\xi+w^*\zeta}$.
+\end{proof}
+
+\begin{lemma}
+  Let $A \subset H$ be a left Hilbert algebra.
+  Then, there exisit $\sigma$-finite projections $\{e_i\} \subset \mathcal{L}(A)^+$ s.t.
+  \begin{itemize}
+    \item $\sum e_i =1$;
+    \item For each $i$, there exist increasing sequence $\{a_{i,n}\} \subset \mathfrak{M}^+$ converging $e_i$;
+    \item For each $n$ and each $r \in \Q$, there exists $m(n,r)$ s.t. $\sigma_r(a_{i,n}) \leq a_{i,m(n,r)}$:
+  \end{itemize}
+\end{lemma}
+
+\begin{proof}
+  Numbering $\Q$ and iikanji net.
+\end{proof}
+
+Suppose $a_{1,i}^{\frac{1}{2}}=L_{\xi_1}$ and $(a_{n,i}^{\frac{1}{2}}-a_{1,n-1}^{\frac{1}{2}})^{\frac{1}{2}}=L_{\xi_n}$. \\
+We define $\varphi'=\sum_i\sum_n \omega_{\xi_{i,n}}$. $J\varphi'J$ is faithful semifinite normal weight and satisfies the following properties.
+\begin{itemize}
+  \item $\varphi \leq \varphi_A$;
+  \item $\varphi(a) = \varphi_A(a)  a \in \mathfrak{M}_A^+$;
+  \item $\varphi(\sigma_t(a)) = \varphi(a)  a \in \mathcal{L}(A)^+$:
+\end{itemize}
+
+In fact, It is same as $\varphi_A$.
+
+\begin{definition}
+  We define Tomita algebra by the following way.
+  \begin{align*}
+    \T := \left\{\xi \in \cap_{\alpha \in \C}\D_{\bigtriangleup^\alpha} \middle| \begin{array}{ll} for\, each,\, \alpha \in \C, \bigtriangleup^\alpha\xi \in \A'\cap\A''(In\, fact,\, we\, only\, need\, it.), \\
+    \D_{\bigtriangleup^\alpha L_\xi \bigtriangleup^{-\alpha}} = \D_{\bigtriangleup^{-\alpha}}, \bigtriangleup^\alpha L_\xi \bigtriangleup^{-\alpha} \subset L_{\bigtriangleup^\alpha \xi},\\
+    \D_{\bigtriangleup^\alpha R_\xi \bigtriangleup^{-\alpha}} = \D_{\bigtriangleup^{-\alpha}} and \bigtriangleup^\alpha R_\xi \bigtriangleup^{-\alpha} \subset R_{\bigtriangleup^\alpha \xi} \end{array} \right\}
+  \end{align*}
+\end{definition}
+
+\begin{theorem}
+  Let $\mathfrak{A} \subset H$ be a left Hilbert algebra. Then, $\T$ is a left Hilbert subalgebra of $\mathfrak{A}''$. and $\T' = \mathfrak{A}'$, $\T'' = \mathfrak{A}''$. \\
+  Moreover,
+\end{theorem}
+
+\subsection{KMS-condition and noncommutative Radon-Nikodym derivative}
+
+\begin{definition}
+  Let $\varphi$ be a weight on $M$ and $\{\pi_t\}$ be a one-parameter group of *-automophism of M. \\
+  \begin{itemize}
+    \item $varphi$ satisfies the Kubo-Martin-Schwinger condition (KMS-condition) for $x,y \in \mathfrak{N}_\varphi \cap \mathfrak{N}_\varphi^*$ w.r.t $\{\pi_t\}$, if there exists an $1$-c.a. function $F_{x,y}$ s.t. $F(it) = \varphi(x\pi_t(y))$ and $F(it + 1)= \varphi(\pi_t(y)x)$.
+    \item Moreover, $\{\phi,\pi_t\}$ satisfies the modular condition, if it satisfies KMS-condition for any two elements in $\mathcal{N}_\varphi \cap \mathcal{N}_\varphi^*$ and $\{\pi_t\}$ leaves invariant the weght $\varphi$.
+  \end{itemize}
+\end{definition}
+
+\begin{theorem}
+  \begin{itemize}
+    \item $\{\varphi, \sigma_t^\varphi\}$ satisfies the modular condition.
+    \item Conversely, if $\{\varphi, \pi_t\}$ satisfies the modular condition $(\mathfrak{N}_\varphi \cap \mathfrak{N}_\varphi^* \rightarrow (\mathfrak{M}_\varphi)^2)$, $\sigma_t^\varphi = \pi_t$.
+  \end{itemize}
+\end{theorem}
+
+
+\begin{theorem}
+  Let $A$ be $C^*$-algebra, $\varphi$ be a faithful state on $A$ and $\sigma_t^{\varphi}$ be a one-parameter automorphismgroup on $A$.
+  If $\sigma_t^{\varphi}$ satisfies KMS-condition with rispect to $\varphi$,
+  we can extend $\varphi$ and $\sigma_t^{\varphi}$ to $\tilde{\varphi}$ and $\tilde{\sigma_t^{\varphi}}$ on $\pi_{\varphi}(A)''$and $\tilde{\varphi}$ is a faithful normal state.
+\end{theorem}
+
+\begin{proof}
+  Use KMS and cyclicvector.
+\end{proof}
+
+\begin{definition}
+  \begin{itemize}
+    \item $M_\infty^\varphi := \{ x \in M | it \mapsto \sigma_t^\varphi(x) $ has an entire analytic extension$\}$;
+    \item $M_0^\varphi := \{x \in M | \sigma_t^\varphi(x)=x \forall t \}$:
+  \end{itemize}
+\end{definition}
+
+\begin{theorem}[A.Connes]
+  Let $M$ be a von Neumann algebra.
+  Let $\varphi$ and $\psi$ be a faithful semifintie normal weight.
+  Then, there exsits one-parameter group $\{u_t\} \subset \mathcal{U}(M)$ s.t.
+    \begin{itemize}
+      \item $u_{t+s} = u_t \sigma_t^{\varphi}(u_s)$;
+      \item $u_t^* = \sigma_t^{\varphi} (u_{-t})$;
+      \item $\sigma_t^\psi(x) = u_t \sigma_t^{\varphi}(x) u_t^*$:
+    \end{itemize}
+\end{theorem}
+
+\begin{proof}
+  We define faithful normal semifinite weght $\theta$ on $M_2(\C)$ by $\theta((a_{i,j})) = \varphi(a_{1,1}) + \psi(a_{2,2})$.
+  By $u = e_{11}-e_{22} \in M_0^\theta$, $e_{11}$ and $e_{22}$ belong to $M_0^\theta$. \\
+  Using KMS-condition, $\sigma_t^\theta(\begin{pmatrix} x & 0 \\ 0 & 0 \end{pmatrix})= \begin{pmatrix} \sigma_t^\varphi(x) & 0 \\ 0 & 0 \end{pmatrix}$.
+  Similarily, $\sigma_t^\psi$. \\
+  $\sigma_t^\theta(e_{21}) = \begin{pmatrix} 0 & 0 \\ u_t & 0 \end{pmatrix}$.
+\end{proof}
+
+\begin{remark}
+  $\sigma_t^{\theta(\varphi,\varphi)} = \sigma_t^\varphi \otimes {\rm id}_2$
+\end{remark}
+
+\begin{theorem}
+  $u_t$ in above Theorem is uniquely determined by the above property and the following condition: \\
+  for all $x \in \mathfrak{N}_\psi \cap \mathfrak{N}_\varphi^*$ and $y \in \mathfrak{N}_\varphi \cap \mathfrak{N}_\psi^*$, there exists $1$-$c.a.$ function F s.t. $F(it) = \varphi(x u_t \sigma_t^\varphi(y))$ and $F(1+it) = \psi(\sigma_t^\psi(y)u_t^*x)$.
+\end{theorem}
+
+In fact, the above two theorem is true($u_tu_t^* = s(\psi) = u_0$, $u_t^*u_t = \sigma_t^\varphi(s(\psi))$, $x \rightarrow xs(\psi) \, y \rightarrow s(\psi)y$ in the additional condition), when $\psi$ is normal semifinite weght.
+
+\begin{proof}
+  \begin{align*}
+    (x_{ij}) \in \mathfrak{N}_\theta (\cap \mathfrak{N}_\theta^*) \Leftrightarrow \left\{ \begin{array}{ll} x_{11} \in \mathfrak{N}_\varphi (\cap \mathfrak{N}_\varphi^*)\\
+      x_{22} \in \mathfrak{N}_\psi (\cap \mathfrak{N}_\psi^*)\\
+      x_{12} \in \mathfrak{N}_\psi (\cap \mathfrak{N}_\varphi^*)\\
+      x_{21} \in \mathfrak{N}_\varphi (\cap \mathfrak{N}_\psi^*)
+    \end{array} \right.
+  \end{align*}
+\end{proof}
+We denote $u_t$ by $[D\psi:D\varphi]$.
+
+\begin{corollary}
+  Let $\varphi \in W_{nsf}(M)$ and $\psi_1$, $\psi_2 \in W_{ns}(M)$. Then, \\
+  $[D\psi_1:D\varphi] = [D\psi_2:D\varphi]$ $Leftrightarrow$ $\psi_1 = \psi_2$.
+\end{corollary}
+
+\begin{proof}
+  We only prove if part.\\
+  $s(\psi_1) = [D\psi_1:D\varphi]_0 = [D\psi_2:D\varphi]_0 = s(\psi_2)$. \\
+  Since $[D\psi_2:D\psi_1]_t[D\psi_1:D\varphi]_t=[D\psi_2:D\varphi]$, $[D\psi_2:D\psi_1]_t=1$.\\
+  We may prove that if $\varphi$, $\psi \in W_{nsf}(M)$ and $[D\varphi:D\psi]=1$, $\varphi=\psi$.\\
+  Since $\sigma_t^{\theta(\varphi,\psi)} = \sigma_t^{\theta(\varphi,\varphi)}$ and $\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \in M_2(\C)^{\theta(\varphi,\psi)}$, \\
+  \begin{align*}
+    \varphi(x)
+    &= \theta(\varphi,\psi)(\begin{pmatrix} x & 0 \\ 0 & 0 \end{pmatrix})\\
+    &= \theta(\varphi,\psi)(\begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}\begin{pmatrix} x & 0 \\ 0 & 0 \end{pmatrix} \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix})\\
+    &= \psi(x).
+  \end{align*}
+\end{proof}
+
+\begin{theorem}
+  Let $\varphi \in W_{nsf}(M)$ and $\psi \in W_{ns}(M)$. The followings are equivalent.
+  \begin{enumerate}
+    \item $\psi \circ \sigma_t^\varphi = \psi$;
+    \item $u_t:=[D\psi:D\varphi]_t \in M^\psi$;
+    \item $[D\psi:D\varphi]_t \in M^\varphi$;
+    \item $\{[D\psi:D\varphi]\}_{t \in \R}$ is a s-continuous group of unitary elements in $\mathcal{U}(M_{s(\psi)})$;
+    \item there exists a positive self-adjoint $A$ affiliated to $M^\varphi$ s.t. $\psi = \varphi_A$:
+  \end{enumerate}
+  Furthermore, if $\psi$ is faithful, then also the following statement is equivalent to those above:
+  \begin{itemize}
+    \item $\varphi \circ \sigma_t^\psi = \varphi$.
+  \end{itemize}
+\end{theorem}
+
+\begin{proof}
+  ($1 \Rightarrow 2$):
+  $\psi(u_t x u_t^*)
+  = \psi(u_t \sigma_t^\psi(\sigma_{-t}^\varphi(x)))
+  = \psi(x)$.\\
+  $\psi(u_t^*xu_t)
+  = \psi(u_t \sigma_t^\varphi(\sigma_{-t}^\psi(x)))
+  = \psi(\sigma_t^\varphi(u_{-t}\sigma_t^\varphi(x)u_{-t}^*))
+  = \psi(u_{-t}\sigma_t^\varphi(x)u_{-t}^*)
+  = \psi(\sigma_t^\psi(x)) = \psi (x)$.\\
+  ($2 \Leftrightarrow 3$ $\Rightarrow$):
+  $\sigma_t^\varphi(u_t)
+  = u_t^*\sigma_t^\psi(u_t)u_t
+  = \sigma_t^\psi(u_t)
+  = u_t$\\
+  ($3 \Rightarrow 4$):
+  $u_t^*u_t = \sigma_t^\varphi(s(\psi))$.\\
+  ($4 \Rightarrow 2$):
+  Since $u_s^*u_s$ is $\sigma_t^\varphi$-invariant,
+  $u_{s+t} = u_s \sigma_t^\varphi(u_t)$, 
+  so $u_t = \sigma_s^\varphi(U_t)$.\\
+  (3 $\Leftrightarrow$ 4 $\Rightarrow$ 5):
+  $[D\varphi_A:D\varphi]_t = A^{it} = [D\psi:D\varphi]_t$. 
+  By the above corollary, $\varphi_A = \psi$.\\
+  (5 $\Rightarrow$ 1):
+  Since $A^{it}$ affiliated to $M^{\varphi_A}$,
+  $\psi \circ \sigma_t^\varphi(x)
+  = \varphi_A \circ \sigma_t^\varphi(x)
+  = \lim \varphi((Ae_n)^{\frac{1}{2}}\sigma_t^{\varphi}(x)(Ae_n)^{\frac{1}{2}})
+  = \lim \varphi(\sigma_t^\varphi((Ae_n)^{\frac{1}{2}}x(Ae_n)^{\frac{1}{2}}))
+  = \lim \varphi((Ae_n)^{\frac{1}{2}}x(Ae_n)^{\frac{1}{2}})
+  = \varphi_A(x)$.
+\end{proof}
+
+\begin{definition}
+  If the above conditions are satisfied, we say that $\psi$ commutes with $\varphi$.
+\end{definition}  
+
+\subsection{Pedersen-Takesaki construction}
+
+\begin{definition}
+  Let $\varphi$ be a normal semifinite weight and $a$ be a positive element in $M^\varphi$.
+  We define $\varphi_a := \varphi(a^{\frac{1}{2}} \cdot a^{\frac{1}{2}})$.
+\end{definition}
+
+\begin{remark}
+  \begin{itemize}
+    \item $\mathfrak{N}_\varphi \subset \mathfrak{N}_{\varphi_a}$, $\mathfrak{M}_\varphi \subset \mathfrak{M}_{\varphi_a}$;
+    \item $\varphi_a$ is a normal semifinite weight;
+    \item If $\varphi$ is fatithful and $a$ is invertible, $\varphi_a$ is fatihful and $\mathfrak{N}_\varphi = \mathfrak{N}_{\varphi_a}$, $\mathfrak{M}_\varphi = \mathfrak{M}_{\varphi_a}$:
+  \end{itemize}
+\end{remark}
+
+\begin{theorem}
+  Let $a$ be invertible and $\varphi$ be faithful.
+  Then, $H_\varphi = H_{\varphi_a}$, $S_{\varphi_a} = S_\varphi$, $\pi_\varphi = \pi_{\varphi_a}$ and $\sigma_t^{\varphi_a}(x) = a^{it}\sigma_t^\varphi(x) a^{-it}$.
+\end{theorem}
+
+\begin{proof}
+  $\<x,y\>_{\varphi_a} = \< x, J_\varphi \pi_\varphi(a) J_\varphi y \>_\phi$. 
+  Since, $||a^{-1}||^{-1} \leq J_\varphi \pi_\varphi(a) J_\varphi ||a||$, $H_\varphi = H_{\varphi_a}$.
+  The assertions without the last one are clear, \\
+  Adjoint of $S_{\varphi_a}$ w.r.t. $\<\cdot,\cdot\>_{\varphi_a}$ $S_{\varphi_a}^*$ is $J_\varphi \pi_\varphi(a)^{-1} J_\varphi S_\varphi^* J_\varphi \pi_\varphi(a) J_\varphi$.
+  So, $\bigtriangleup_{\varphi_a} = J_\varphi \pi_\varphi(a)^{-1} J_\varphi\pi_\varphi(a) \bigtriangleup_\varphi$.
+  Since $J_\varphi \pi_\varphi(a)^{-1} J_\varphi $, $\pi_\varphi(a)$ and $ \bigtriangleup_\varphi$ commute with each other,
+  \begin{align*}
+    \pi_{\varphi_a}(\sigma_t^{\varphi_a}(x)) &= \bigtriangleup_{\varphi_a}^{it} \pi_{\varphi_a}(x) \bigtriangleup_{\varphi_a}^{-it}\\
+    &= J_\varphi \pi_\varphi(a)^{it} J_\varphi\pi_\varphi(a)^{it} \bigtriangleup_\varphi^{it} \pi_{\varphi_a}(x) \bigtriangleup_\varphi^{-it} \pi_\varphi(a)^{-it}  J_\varphi \pi_\varphi(a)^{-it} J_\varphi\\
+    &= J_\varphi \pi_\varphi(a)^{it} J_\varphi\pi_\varphi(a^{it}\sigma_t^\varphi(x)i a^{-it}) J_\varphi \pi_\varphi(a)^{-it} J_\varphi\\
+    &= \pi_\varphi(a^{it}\sigma_t^\varphi(x)i a^{-it}).
+  \end{align*}
+ \[
+  \xymatrix{
+    M \ar[r]^{\sigma_t^{\varphi_a}} \ar[d]^{\pi_{\varphi_a}} & M \ar[d]^{\pi_{\varphi_a}} \\
+    \pi_{\varphi_a}(M) \ar[r]^{\bigtriangleup_{\varphi_a}^{it} \cdot \bigtriangleup_{\varphi_a}^{-it}}& \pi_{\varphi_a}(M) .
+  }
+  \]
+\end{proof}
+
+\begin{proposition}
+  Let $\varphi$ be a semifinite normal weight and $A$, $B$ be a positive self-adjoint affiliated to $M^\varphi$, then $\varphi_A + \varphi_B = \varphi_{A+B}$.
+\end{proposition}
+
+\begin{proof}
+  $u := w$-$\lim_{\varepsilon \rightarrow 0}A^{\frac{1}{2}}(A+B+\varepsilon)^{-\frac{1}{2}} \in M^\varphi$.
+\end{proof}
+
+\begin{definition}
+  Let $A_k$, $A$, $B$ be a self-adjoint positive op's. 
+  \begin{itemize}
+    \item $A \leq B \Leftrightarrow (1+B)^{-1} \leq (1+A)^{-1}$;
+    \item $A_k \uparrow A \Leftrightarrow (1+A_k)^{-1} \downarrow (1+A)^{-1}$.
+  \end{itemize}
+\end{definition}
+
+\begin{remark}
+  \begin{itemize}
+    \item ;;;;
+  \end{itemize}
+\end{remark}
+
+\begin{theorem}
+  Let $A$ and increasing net $\{A_i\}_{i \in I}$ be a positive self-adjoint op's on H s.t. $A_i\leq A$.
+  Then, there exists positive self-adjoint op. $B$ s.t. $A_i \uparrow B$.
+\end{theorem}
+
+This follows from the following proposition.
+
+\begin{proposition}
+  Let $\{A_i\}$ be an increasing net of positive self-adjoint operators.
+  There exists a positive selfadjoint op. $A$ s.t. $A_i \uparrow A$ if and only if $D = \{ \xi \in H | \lim_i||A_i^{\frac{1}{2}}\xi|| < \infty \}$ is dense in $H$.
+  In this case, $D = D_{A^{\frac{1}{2}}}$.
+\end{proposition}
+
+\begin{theorem}
+  Let $\varphi$ be a normal semifinite weight and $A$ be a positive s.a. op. affiliated to $M^\varphi$.
+  We define $\varphi_A(x) := \lim_n \varphi((Ae_n)^{\frac{1}{2}}x(Ae_n)^{-\frac{1}{2}}))$.
+  Then, $\varphi_A \in W_{ns}(M)$ and $\sigma_t^{\varphi_A} = A^{it} \sigma_t^\varphi(x) A^{-it}$ $(x \in M_{s(A})$.
+\end{theorem}
+
+\begin{corollary}
+  $[D\varphi_A:D\varphi]_t = A^{it}$.
+\end{corollary}
+
+\begin{proof}
+  Let $B = \begin{pmatrix} 1 & 0 \\ 0 & A \end{pmatrix}$.\\
+  Then, $\begin{pmatrix} 0 & 0 \\ [D\varphi_A:D\varphi]_t & 0 \end{pmatrix}
+  = \sigma_t^{\theta(\varphi,\varphi_A)}(\begin{pmatrix} 0 & 0 \\ s(A) & 0 \end{pmatrix})
+  = \sigma_t^{\theta(\varphi,\varphi)_B}(\begin{pmatrix} 0 & 0 \\ s(A) & 0 \end{pmatrix})
+  = B^{it} \sigma_t^{\theta(\varphi,\varphi)}(\begin{pmatrix} 0 & 0 \\ s(A) & 0 \end{pmatrix}) B^{-it}$.
+\end{proof}
+
+\begin{proposition}
+  Let $\varphi$ be a semifinite weight and $v \in M$ be a partial isometry s.t. $v v^* \in M^\varphi$.
+  Then, $\varphi_v := \varphi(v \cdot v^*) \in W_n(M)$.
+\end{proposition}
+
+\begin{proof}
+  Let $e_i \in \fM_\varphi$ be $e_i \nearrow 1$.
+  We define $v^*v =:p$ and $vv^*=:q$.
+  Since $qe_iq \in \fM_\varphi$, $1-p + v^*e_iv \in \fM_{\varphi_a}$.
+\end{proof}
+
+\begin{theorem}
+  Let $\varphi$ be a normal semifinite faithful weight $v \in M$ be a partial isometry s.t. $vv^* \in M^\varphi$.
+  Then, $\sigma_t^{\varphi_v} (x) = v^* \sigma_t^\varphi(vxv^*)v$ $(x \in M_{v^*v})$.
+\end{theorem}
+
+\begin{proof}
+  modular condition.
+\end{proof}
+
+\begin{theorem}
+  Let $\varphi$ be a normal semifinite faithful weight $v \in M$ be a partial isometry s.t. $vv^* \in M^\varphi$.
+  Then, $[D\varphi_v:D\varphi]= v^*\sigma_t^\varphi(v)$ and $\sigma_t^\varphi(v) = v [D\varphi_v:D\varphi]$.
+\end{theorem}
+
+\begin{proof}
+  Let $u = \begin{pmatrix} 1 & 0 \\ 0 & v \end{pmatrix}$.\\
+  Then,
+  \begin{align*}
+    \begin{pmatrix} 0 & 0 \\ [D\varphi_u:D\varphi]_t & 0 \end{pmatrix}
+    &= \sigma_t^{\theta(\varphi,\varphi_v)}(\begin{pmatrix} 0 & 0 \\ s(\varphi_v) & 0 \end{pmatrix})\\
+    &= \sigma_t^{\theta(\varphi,\varphi)_u}(\begin{pmatrix} 0 & 0 \\ v^*v & 0 \end{pmatrix})\\
+    &= \begin{pmatrix} 1 & 0 \\ 0 & v^* \end{pmatrix} \sigma_t^{\theta(\varphi,\varphi)}(\begin{pmatrix} 1 & 0 \\ 0 & v \end{pmatrix}\begin{pmatrix} 0 & 0 \\ v^*v & 0 \end{pmatrix}\begin{pmatrix} 1 & 0 \\ 0 & v^* \end{pmatrix}) \begin{pmatrix} 1 & 0 \\ 0 & v \end{pmatrix}\\
+    &= \begin{pmatrix} 0 & 0 \\ v^*\sigma_t^\varphi(v) & 0 \end{pmatrix}
+  \end{align*}
+\end{proof}
+
+\subsection{Connes' inverse problem}
+
+\begin{definition}
+  Let $G$ be a locally compact group and $\sigma : G \rightarrow {\rm Aut} (M)$. \\
+  $\sigma$-cocycle $Leftrightarrow$ $w : G \rightarrow M$, s*-conti s.t.
+  \begin{itemize}
+    \item $w(gh) = w(g)\sigma_g(w(h))$;
+    \item $w(g^{-1}) = \sigma_g^{-1}(w(g)^*)$:
+  \end{itemize}
+  We denote all $\sigma$-cocycle by $Z_\sigma(G;M)$.
+\end{definition}
+
+\begin{remark}
+  \begin{itemize}
+    \item $w(g)w(g)^*=w(e)$, $w(g)^*w(g)=\sigma_g(w(e))$.
+    \item $[D\psi:D\varphi]$ is a $\sigma^\varphi$-cocycle.
+  \end{itemize}
+\end{remark}
+
+\begin{theorem}
+  For all $\varphi \in W_{nsf}(M)$ and for all $w \in Z_\sigma(G;M)$, there only exists $\psi \in W_{ns}(M)$ s.t. $[D\psi:D\varphi]$.
+\end{theorem}
+
+\begin{proof}
+  $L^2(\R) \cong l^2(\Z)$.
+
+
+  $\Phi(x) := \sum \varphi(x_{ii})$ is a normal semifinite faithful weight and $\sigma_t^\Phi \overline{\otimes}\iota$.
+
+
+  Let $u_t \in B(L)$ be a left regular representation.
+  By Stone's theorem, there exisits $A$ aff to $(M \overline{\otimes}B(l^2(\Z)))^\Phi$ s.t.$1 \otimes u_t = A^{it}$.
+  $\Phi':=\Phi_A$.
+  Then, $\sigma_t^{\Phi'} = \sigma_t^\varphi \overline{\otimes} {\rm Ad}u_t$.
+
+
+  We define $W \in M \overline{\otimes} B(L^2(\R))$ by $W\zeta(t) := w(t)\zeta(t)$.
+  Then, $\sigma_t^{\Phi'}(W*)(s) = \sigma_t^\varphi(w(s-t)^*)$, so $W\sigma_t^{\Phi'}(W*)(s) = w(t)$, so $W\sigma_t^{\Phi'}(W*) = w(t) \otimes 1$.
+  Since $\sigma_t^{\Phi'}(W*W)$, $\Psi := \Phi'(W^* \cdot W) \in W_{ns}(M)$ and $\sigma_t^\Psi = {\rm Ad}(w(t))\circ \sigma_t^\varphi \overline{\otimes} {\rm Ad}(u_t)$.
+
+
+  Similarily, we define $\Psi' := \Psi_{A^{-1}}$.
+  Then, $\sigma_t^{\Psi'} = {\rm Ad}(w(t))\circ \sigma_t^\varphi \overline{\otimes} \iota$.
+
+
+  Let $p \in P(B(l^2(\Z)))$ be a minimal projection.
+  Since $M \cong (1 \otimes p)(M \overline{\otimes}B(l^2(\Z)))$, we define $\psi' := \Psi'_{(1 \otimes p)}$.
+  Then, $\sigma_t^{\psi'}(x) = \sigma_t^{\psi'}(x \otimes p) = {\rm Ad}(w(t))\circ\sigma_t^\varphi(x)$.
+
+
+  Let $w'(t) := [D\psi':D\varphi]_t$ and $a(t) := w'(t)^*w(t)$.
+  Since ${\rm Ad}(w(t)) \circ \sigma_t^\varphi = \sigma_t^{\varphi'} = {\rm Ad}(w(t)) \circ \sigma_t^\varphi$,
+  $a(t)$ belongs to $\mathcal(U)(Z(M))$ and is $s$-continuous.
+  So, there exists $A$ affiliated to $M^{\psi'}$.
+  $\psi := \psi'_A$.
+  Then,
+  \begin{align*}
+    [D\psi:D\phi]_t
+    &= [D\psi:D\psi']_t[D\psi':D\varphi]_t \\
+    &= a(t)w'(t) = w'(t)a(t) =w(t)
+  \end{align*}
+\end{proof}
+  
+\subsection{continuous decomposition}
+
+\begin{remark}
+  If $e$, $f \in M^\varphi$, $\varphi(pxp) + \varphi((f-p)x(f-p)) = \varphi(fxf)$.
+\end{remark}
+
+\subsection{Existence of conditional expectation}
+
+\begin{theorem}[\cite{takesaki1972conditional}]
+  Let $M$ be a von Neumann algebra and $N$ be a subalgera of $M$.
+  Let $\varphi$ be a nsff weight on $M$ and $\varphi|_N$ be a semifinite weight on $N$.
+  Then, the following conditions are equivalent.
+  \begin{description}
+    \item[(1)] $N$ is invariant for $\sigma_t^\varphi$;
+    \item[(2)] there exists a normal conditinal expectation $\varepsilon$ from $M$ onto $N$ s.t. $\dot{\varphi}(x) = \dot{\varphi}\circ \varepsilon (x) $ $x \in \fM$:
+  \end{description}
+\end{theorem}
+
+\begin{remark}
+  By modular condtion and (2), $\sigma_t^\varphi = \sigma_t^{\varphi\circ \epsilon}$ on $N$. \\
+  $\bigtriangleup^{it}\eta_\varphi(x) = \eta_\varphi(\sigma_t^\varphi(x))$.
+\end{remark}
+
+\begin{proof}
+  We assume (1).
+  Let $A = \fN_\varphi \cap \fN_\varphi^*$ and $H$ be a completion of $A$.
+  Let $B = \fN_{\varphi|_N} \cap \fN_{\varphi|_N}$ and $K$ be a completion of $B$.
+  Let $E$ be a orthogonal projection from $H$ onto $K$. 
+  Then, $B = A \cap N$.\\
+  Since $\bigtriangleup_A^{it}\eta_\varphi(x) = \eta_\varphi(\sigma_t^\varphi(x)) = \eta_\varphi(\sigma_t^{\varphi|_N}(x)) = \bigtriangleup_B^{it}\eta_\varphi(x)$ ($x \in \fN \cap N$),
+  $\bigtriangleup_B^{it}\xi = \bigtriangleup_{A}^{it}\xi$ ($\xi \in K$).
+  Since $E$ commutes with $\bigtriangleup_A$, $\bigtriangleup_B = \bigtriangleup_A|_K$ and $J_B = J_A|_K$.\\
+  $A \cap K = B$ and $A' \cap K = B'$.
+  Indeed, $A' \cap K \subset B' \Rightarrow A \cap K = J(A' \cap K) \subset JB'=B$.
+  Let $\rho : \mathcal{L}(B) \rightarrow \mathcal{A} $ $x \mapsto \pi_M \circ \pi_N^{-1}(x)$ and $\rho' : \mathcal{L}(B)' \rightarrow \mathcal{A}' $ $x \mapsto J\pi_M \circ \pi_N^{-1}(JxJ)J$.
+  Then, $\rho (L^B_\xi) = L^A_\xi$ $(\xi \in B)$ and $\rho' (L^{B'}_\xi) = L^{A'}_\xi$ $(\xi \in B')$. \\
+  Therefore, $B_0 = A_0 \cap K$, where $A_0$ and $B_0$ are Tomita algebras. \\
+  Also, $B=EA$, $B'=EA'$, $B_0=EA_0$, $E(\xi\eta) = \xi E(\eta)$ ($\xi \in B, \eta \in A$) and $E(\xi\eta) = E(\xi)\eta$ ($\xi \in A', \eta \in B'$).
+  Since $L^B_{E\xi}=EL^A_\xi E$ ($\xi in A$), $\mathcal{L}(B) = E\mathcal{L}(A)E|_K$,
+  we can define $\varepsilon(x) := \pi_N^{-1}(E\pi_M(x)E)$\\
+  For $x \in \fM^+$, $\varphi(x) = \sup \{\<\pi_M(x)\eta, \eta\>| \eta \in B', ||L^{B'}_\eta|| \leq 1\}$. ($geq$ part follows from semifinite).
+  By semifiniteness, $\varepsilon$ is faithful.
+
+  We assume (2).
+  Then, $E\eta(x) = \eta\circ\varepsilon(x)$ ($ x \in \fN$).
+  So, $EA=B$.
+  Since $E\xi^\sharp=(E\xi)^\sharp$ ($\xi \in A$), $ES\xi = SE\xi$ ($\xi \in \D_S$).\\
+  By $S=(1-2E)S(1-2E)$ and $S^* = (1-2E)S^*(1-2E)$, $\bigtriangleup = (1-2E)\bigtriangleup(1-2E)$.
+  So, $E$ and $\bigtriangleup$ commute.
+  So, $\bigtriangleup^{it}B=B$.
+  By the previous remark, so we get this result.
+  
+
+\end{proof}
+
+  

@@ -1,0 +1,150 @@
+\section{Boundary}
+We assume $G$ is discrete group.
+\subsection{injective envelope}
+\begin{definition}
+  Let $\mathcal{S}$ be a operator system, i.e. a unital self-adjoint subspace of a unital $\rm{C}^*$-algebra.
+  
+  We say $G$-operator system if there is a homomorphism from $G$ into the group of order isomorphism on $\mathcal{S}$ that sends the identity element of $G$ to the unit of $\mathcal{S}$.
+  
+  A $G$-operator system $\mathcal{U}$ is $G$-injective if for every unital c.i. $G$-equivariant map $\iota : \mathcal{S} \rightarrow \mathcal{T}$ and
+  every unital c.p. $G$-equvariant map $\psi : \mathcal{S} \rightarrow \mathcal{U}$,
+  there exists unital c.p. $G$-equivariant map $\hat{\varphi} : \mathcal{T} \rightarrow \mathcal{U}$ s.t. $\hat{\varphi} \circ \iota = \psi$
+  \[
+  \xymatrix{
+    \mathcal{S} \ar[rr]^{\iota(c.i.)} \ar[dr]_{\psi(c.p.)} &\ar@{}[d]|\circlearrowleft &\mathcal{T} \ar@{-->}[dl]^{\hat{\varphi}(c.p.)} \\
+    &\mathcal{U}& .
+  }
+  \]
+  
+  A $G$-extension of $\mathcal{S}$ is a pair $(\mathcal{T},\iota)$ consisting of a $G$-operator space $\mathcal{T}$ and c.i. $G$-equivariant $\iota : \mathcal{S} \rightarrow \mathcal{T}$ .
+
+  A $G$-extenstion $(\mathcal{U},\iota)$ is $G$-injective.
+
+  It is $G$-essensial if for every unital c.p. $G$-equivarinat map $\varphi: \mathcal{U} \rightarrow \mathcal{T}$ s.t. $\varphi \circ \iota$ is c.i. on $\mathcal{S}$ is necessarily c.i.
+  \[
+  \xymatrix{
+    \mathcal{S} \ar[r]^{\iota(c.i.)}&\mathcal{U} \ar[d]^{\varphi(c.p.\Rightarrow c.i.)} \\
+    & \mathcal{T}.
+  }
+  \]
+
+  It is $G$-rigid if for every unital c.p. $G$-equivarinat map $\varphi : \mathcal{U} \rightarrow \mathcal{U}$ s.t. $ \varphi \circ \iota = \iota$ on $\mathcal{S}$, $\varphi$ is necessarily the identity map on $\mathcal{U}$.
+  \[
+  \xymatrix{
+    \mathcal{U} \ar[rr]^{\varphi (c.p.) \Rightarrow \rm{id}} &\ar@{}[d]|\circlearrowleft &\mathcal{U} \\
+    &\mathcal{U} \ar[lu]^{\iota} \ar[ur]_\iota& .
+  }
+  \]
+
+  It is $G$-injective envelope of $\mathcal{S}$ if it is $G$-injective and $G$-essential.
+\end{definition}
+
+\begin{remark}
+  \cite{hamana1979injective}
+  Every $G$-injective envelope of $\mathcal{S}$ is $G$-rigid.
+\end{remark}
+
+\begin{remark}
+  Unital completely isometric map is unital completely positive.
+\end{remark}
+
+\begin{theorem}
+  [Hamana]
+  Let $G$ be a  discrete group, and $\mathcal{S}$ be a $G$-oprator system.
+  Then, $\mathcal{S}$ has a $G$-injective envelope $(I_G(\mathcal{S}),\kappa)$.
+  This injective envelope is uniwue, un the sense that for every $G$-injective envelope $(\mathcal{U},\iota)$ of $\mathcal{S}$, there exists a uc.i. $G$-equivarent map $\varphi : I_G(\mathcal{S}) \rightarrow \mathcal{U}$ s.t. $\varphi \circ \kappa = \iota$. 
+\end{theorem}
+
+For an injective $\rm{C}^*$-algebra $\mathcal{A}$, $I_G(\mathcal{A})$ is injective $\rm{C}^*$-algebra w.r.t the Choi-Effros product.
+
+\subsection{Furstenberg boundary}
+\begin{definition}
+  Let $G$ be a discrete group.
+  The Hamana boundary $\d_H G$ of $G$ is the compact space s.t. $I_G(\C) = C(\d_H G)$.
+  By contrvariance, the $G$-action on $C(\d_H G)$ induces a $G$-action on $\d_H G$ which we will refer to as the $G$-action on $\d_H G)$.
+\end{definition}
+
+\begin{theorem}
+  $\d_H G$ is a point if and only if $G$ is amenable.
+\end{theorem}
+
+\begin{definition}
+  Let $G$ be a group and $X$ be a compact $G$-space.
+
+  The $G$-action on $X$ is minimal if for every $x$ in $X$,
+  the $G$-orbit $Gx$ is dense in $X$.
+
+  The $G$-action on $X$ is strongly proximal if for every probability measure $\nu \in \mathcal{P}(X)$,
+  the weak* closure of the $G$-orbit $G\nu$ contains a point mass $\delta_x$ for some $x \in X$.
+
+  $X$ is a $G$-boundary if the $G$-action on $X$ is both minimal and strongly proximal,
+  i.e. for every probability measure $\nu \in \mathcal{P}(X)$,
+ $\overline{G\nu}^{w*} \supset X$.
+\end{definition}
+
+\begin{remark}
+  The Hamana boundary is a $G$-boundary. 
+\end{remark}
+
+\begin{proof}
+  ne
+\end{proof}
+
+\begin{remark}
+  $\d F_2$ is a $F_2$-boundary, but $\d \Z$ is not a $\Z$-boundary.
+\end{remark}
+
+\begin{lemma}
+  Let $G$ be a group,
+  let $M$ be a minimal compact $G$-space and let $B$ be a compact $G$-boundary.
+  There is at most one unital positive $G$-equivariant map from $C(B)$ to $C(M)$,
+  and if such a map exists, then it is a unital injective $*$-homomorphism.
+\end{lemma}
+
+\begin{theorem}
+  Let $G$ be a discrete group.
+  Then, $\d_F G \cong \d_H G$.
+\end{theorem}
+
+\begin{proposition}
+  The map taking a probability measure $\nu \in \mathcal{P}(\d_F G)$ to $P_\nu(C(\d_F G))$ is a bijection between $\mathcal{P}(\d_F G)$ and the collection of unital isometoric $G$-equivarinat copies of $C(\d_F G)$ in $l^\infty(G)$.
+  The image $P_\nu(C(\d_F G))$ is a $\rm{C}^*$-subalgebra if and only if $\nu$ is a point mass.
+\end{proposition}
+
+\begin{theorem}
+  Let $G$ be a discrete group.
+  Then $G$ is exact if and only if the $G$-action on $\d_F G$ is amenable.
+\end{theorem}
+
+\subsection{C*-simplicity}
+\begin{theorem}
+  Let $G$ be a discrete group.
+  There is a canonical nuclear $\rm{C}^*$-algebra $N(C_r^*(G)) = C(\d_F G) \rtimes_r G$ s.t.
+  \begin{align*}
+    C_r^*(G) \subset N(C_r^*(G) \subset I(C_r^*(G)),
+  \end{align*}
+  where $I(C_r^*(G))$ denotes the injective envelope of $C_r^*(G)$.
+  The algebra $N(C_r^*(G))$ is simple if $C_r^*(G)$ is simple,
+  and prime if and only if $C_r^*(G)$ is prime.
+\end{theorem}
+\begin{definition}
+  Let $G$ be adiscrete group, and let $X$ be a compact $G$-space.
+
+  The $G$-action on $X$ is topologically free if for every $s \in G\backslash \{e\}$,
+  the set
+  \begin{align*}
+    X \backslash X^s = \{x\in X|sx \neq x\}
+  \end{align*}
+  is dense in X.
+\end{definition}
+\begin{theorem}
+  Let $G$ be a discrete group.
+  Then the followings are equivalent:
+  \begin{enumerate}
+  \item The group $G$ is $\rm{C}^*$-simple.
+  \item $C(\d_F G) \rtimes_r G$ is simple.
+  \item $C(B) \rtimes_r G$ is simple for some $G$-boundary $B$.
+  \item The $G$-action on $\d_F G$ is topologically free.
+  \item The $G$-action on some $G$-boundary is topologically free.
+  \end{enumerate}
+\end{theorem}

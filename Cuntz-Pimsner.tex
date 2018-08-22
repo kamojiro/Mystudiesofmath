@@ -1,0 +1,29 @@
+\section{Cuntz-Pimsner algebra}
+
+\subsection{Construction of Toeplitz-Pimsner algebra and Cuntz-Pimsner algebra}
+
+\begin{definition}
+  Let $A$ be a C*-algebra.
+  An $A$-$B$ C*-correspondence is a (right) Hilbert $B$-module $H$ with a faithful $*$-representation $\pi_H:A \rightarrow B(H)$,
+  where $B(H)$ is a all of adjointable $B$-linear bounded maps.\\
+  In paticular, we call C*-correspondence over $A$ if $A=B$.
+\end{definition}
+
+Let $\F(H) := \oplus_{n\geq 0}H^{{\otimes}_A n}$, where $H^{{\otimes}_A 0}=A$.
+Let $\pi_{\F(H)}(a) = T_a \oplus (\oplus_{n\geq0}\pi_H(a)\otimes id^{\otimes n})$, where $T_a$ is a left multiplication.
+Then, $\F(H)$ is a C*-correspondence over $A$.\\
+For $\xi \in H$, we define $T_\xi \in B(\F(H))$ by
+$T_\xi(\hat{a})=\xi a \in H$ and $T_\xi (\xi_1\otimes \cdots \otimes \xi_n) = \xi \otimes \xi_1 \otimes \cdots \otimes \xi_n$.
+
+\begin{definition}
+  $\mathcal{T}(H) = C^*(A \cup \{T_\xi|\xi \in H\})$ is called a Toeplitz-Pimsner algebra.
+\end{definition}
+
+Let $I_H = A \cap K(H)$, where $K(H) = C^*(\{\theta_{\xi,\eta}|\xi, \eta \in H\})$ $(\theta_{\xi,\eta}(\zeta) = \xi \<\eta,\zeta\>)$, which is  an ideal of $A$.
+Let $K(\F(H)I_H)$ is a ideal of $B(\F(H)I_H)$ and contained in $\mathcal{T}(H)$.
+Let $Q_I:B(\F(H)I_H)\rightarrow B(\F(H)I_H)/K(\F(H)I_H)$ be a quatient map.
+
+\begin{definition}
+  $\O(H) := Q_I(\mathcal{T}(H))$ is called a Cuntz-Pimsner algebra.
+\end{definition}
+
